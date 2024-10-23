@@ -236,7 +236,7 @@ class pisol_dcw_quick_view_frontend{
 			<?php endif; ?>
 		</div>
  	        <?php
- 	                  
+ 	        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped          
  	        echo  ob_get_clean();
  	
  	        exit();
