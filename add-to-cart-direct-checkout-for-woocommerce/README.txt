@@ -4,7 +4,7 @@ Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
 Tested up to: 6.6.1
-Stable tag: 2.1.73.33
+Stable tag: 2.1.73.34
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -157,9 +157,11 @@ In the Pro version, you can remove "Ship to a different address?" option
 
 = Remove billing field from the checkout form =
 In Pro version, You can remove, Billing the first name, Billing last name, Billing City, Billing country, Billing state, Billing address line 1, Billing address line 2, Billing postal code from the checkout form
+This feature will only work if your checkout page is made using WooCommerce short code [woocommerce_checkout], It will not work if your checkout page is made of WooCommerce checkout Block.
 
 = Remove shipping field from the checkout form =
 In Pro version You can remove, Shipping First name, Shipping last name, Shipping city, Shipping country, Shipping state, Shipping address line 1, Shipping address line 2, Shipping postal code from the checkout form
+This feature will only work if your checkout page is made using WooCommerce short code [woocommerce_checkout], It will not work if your checkout page is made of WooCommerce checkout Block.
 
 = I want to redirect to external URL after add to cart =
 Yes you can do that in the pro version
@@ -210,6 +212,9 @@ Yes the Free version and PRO version both are HPOS compatible
 Yes in the pro version you can make the buy now button behave like Amazon.com buy now button. So that when user click on buy now button they are redirected to the checkout page, and the product is added to the cart, so they can checkout with that product only, and other product in the cart will be left in the cart for future checkout.
 
 == Changelog ==
+
+= 2.1.73.34 =
+* content change
 
 = 2.1.73.32 =
 * Tested for WC 9.3.0
