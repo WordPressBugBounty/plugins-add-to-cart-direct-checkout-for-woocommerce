@@ -3,8 +3,8 @@ Contributors: rajeshsingh520
 Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
-Tested up to: 6.6.1
-Stable tag: 2.1.73.34
+Tested up to: 6.7.0
+Stable tag: 2.1.73.36
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -212,6 +212,9 @@ Yes the Free version and PRO version both are HPOS compatible
 Yes in the pro version you can make the buy now button behave like Amazon.com buy now button. So that when user click on buy now button they are redirected to the checkout page, and the product is added to the cart, so they can checkout with that product only, and other product in the cart will be left in the cart for future checkout.
 
 == Changelog ==
+
+= 2.1.73.36 =
+* Tested for WP 6.7.0
 
 = 2.1.73.34 =
 * content change
