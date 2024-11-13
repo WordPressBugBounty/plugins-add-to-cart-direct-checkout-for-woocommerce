@@ -10,9 +10,13 @@ class pisol_dcw_other_plugins{
 
     private $this_tab = 'pisol_dcw_other_plugins';
 
-    private $tab_name = "Related Plugins";
+    private $tab_name = "Other addons";
 
     private $setting_key = 'pisol_dcw_other_plugins';
+
+    public $tab;
+
+    public $settings;
 
 
     function __construct($plugin_name){
