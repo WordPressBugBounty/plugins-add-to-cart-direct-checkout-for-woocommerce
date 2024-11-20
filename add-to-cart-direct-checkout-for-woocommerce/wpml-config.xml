@@ -5,5 +5,8 @@
         <key name="pi_dcw_read_more_text"/>
         <key name="pi_dcw_quick_view_text"/>
         <key name="pi_dcw_force_login_msg"/>
+        <key name="pi_dcw_captcha_placeholder"/>
+        <key name="pi_dcw_captcha_blank_error"/>
+        <key name="pi_dcw_captcha_mismatch_error"/>
     </admin-texts>
 </wpml-config>

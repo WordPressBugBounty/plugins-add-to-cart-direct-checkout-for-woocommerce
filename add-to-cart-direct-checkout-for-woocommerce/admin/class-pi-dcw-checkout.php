@@ -106,6 +106,24 @@ class Class_Pi_Dcw_Checkout{
 
             array('field'=>'pi_dcw_custom_checkout_redirect_url1','desc'=>'Redirect to this url on checkout e.g.: http://yourwebsite.com', 'label'=>__('Use this custom url as thankyou page','pi-dcw'),'type'=>'text', 'pro'=>true),
 
+            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout spam protection','pi-dcw'), 'type'=>'setting_category'),
+
+            array('field'=>'pi_dcw_enable_checkout_captcha','desc'=>'Enable captcha on checkout page', 'label'=>__('Enable captcha on checkout page','pi-dcw'),'type'=>'switch','default'=>0),
+
+            array('field'=>'pi_dcw_captcha_position','desc'=>'Position of the captcha on the checkout page (We have given the hook names)', 'label'=>__('Position of the captcha','pi-dcw'),'type'=>'select', 'value'=>$this->position(), 'default'=>'woocommerce_review_order_before_submit'),
+
+            array('field'=>'pi_dcw_captcha_field_color','desc'=>'color scheme of the captcha field ', 'label'=>__('Captcha field color scheme','pi-dcw'),'type'=>'color', 'default'=>'#cccccc'),
+
+            array('field'=>'pi_dcw_captcha_field_error_color','desc'=>'color scheme of the captcha field ', 'label'=>__('Captcha field error color scheme','pi-dcw'),'type'=>'color', 'default'=>'#ff0000'),
+
+            array('field'=>'pi_dcw_captcha_characters','desc'=>'Type of string used in captcha', 'label'=>__('Select type of string to use in the captcha','pi-dcw'),'type'=>'select', 'default'=>'mix', 'value'=>array('capital_letter'=>'Capital letter','small_letter'=>'Small letter','numbers'=>'Numbers','mix'=>'Mix')),
+
+            array('field'=>'pi_dcw_captcha_length','desc'=>'', 'label'=>__('Captcha string length','pi-dcw'),'type'=>'select', 'default'=>'6', 'value'=>array(1 => 1, 2 => 2, 3 => 3, 4 => 4, 5 => 5, 6 => 6)),
+
+            array('field'=>'pi_dcw_captcha_placeholder','desc'=>'', 'label'=>__('Captcha field placeholder','pi-dcw'),'type'=>'text', 'default'=>'Enter the CAPTCHA'),
+            array('field'=>'pi_dcw_captcha_blank_error','desc'=>'', 'label'=>__('Captcha cant be left empty','pi-dcw'),'type'=>'text', 'default'=>'Captcha cant be left empty'),
+            array('field'=>'pi_dcw_captcha_mismatch_error','desc'=>'', 'label'=>__('Captcha cant be left empty','pi-dcw'),'type'=>'text', 'default'=>'Captcha does not match, please try again.'),
+
            
         );
         $this->register_settings();
@@ -157,7 +175,16 @@ class Class_Pi_Dcw_Checkout{
        <?php
     }
 
-    
+    function position(){
+        $positions = ['woocommerce_review_order_before_submit', 'woocommerce_review_order_after_submit','woocommerce_review_order_before_payment','woocommerce_checkout_before_order_review','woocommerce_checkout_after_customer_details','woocommerce_after_order_notes','woocommerce_after_checkout_billing_form','woocommerce_before_checkout_billing_form'];
+
+        $position_array = array();
+
+        foreach($positions as $position){
+            $position_array[$position] = $position;
+        }
+        return $position_array;
+    }
 }
 
 new Class_Pi_Dcw_Checkout($this->plugin_name);

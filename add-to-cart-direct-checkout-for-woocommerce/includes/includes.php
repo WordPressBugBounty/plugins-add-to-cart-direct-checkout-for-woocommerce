@@ -17,3 +17,4 @@ require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/quickview/class.fr
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-change-quantity-checkout.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-checkout-authentication.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-sold-individually.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-checkout-captcha.php';
