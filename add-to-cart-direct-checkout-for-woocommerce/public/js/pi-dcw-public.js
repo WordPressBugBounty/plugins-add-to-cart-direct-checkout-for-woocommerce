@@ -63,10 +63,16 @@
 			this.checkAddToCart = function () {
 				if (this.is_variable) {
 					var id = parseInt($("input[name='variation_id']").val());
+					var parentForm = $("input[name='variation_id']").closest("form.variations_form");
+					if(parentForm.length > 0){
+						var button = parentForm.find(".pisol_single_buy_now"); 
+					}else{
+						var button = $("button.pisol_single_buy_now");
+					}
 					if (id > 0 && id != "") {
-						this.statusBuyNow(true);
+						this.statusBuyNow(button, true);
 					} else {
-						this.statusBuyNow(false);
+						this.statusBuyNow(button, false);
 					}
 				}
 			}
@@ -75,31 +81,52 @@
 				var parent = this;
 
 				$(".single_variation_wrap").on("show_variation", function (event, variation) {
+					var button = jQuery(".pisol_single_buy_now", this);
 					if (variation['is_in_stock']) {
-						parent.statusBuyNow(true);
+						parent.statusBuyNow(button, true);
 					} else {
-						parent.statusBuyNow(false);
+						parent.statusBuyNow(button, false, true);
 					}
 				});
 			}
 
-			this.statusBuyNow = function (status) {
+			this.statusBuyNow = function (button, status, out_of_stock = false) {
 				var $ = jQuery;
 				if (status) {
-					$(".pisol_single_buy_now").attr("disabled", false);
+					//$(".pisol_single_buy_now").attr("disabled", false);
 					$(".pisol_single_buy_now").removeClass('disabled');
+					button.removeAttr('data-message');
 				} else {
-					$(".pisol_single_buy_now").attr("disabled", true);
+					//$(".pisol_single_buy_now").attr("disabled", true);
 					$(".pisol_single_buy_now").addClass('disabled');
+
+					var message  = '';
+					if(out_of_stock){
+						if(typeof wc_add_to_cart_variation_params != 'undefined'){
+							message = wc_add_to_cart_variation_params.i18n_unavailable_text ?? '';
+						}
+					}else{
+						if(typeof wc_add_to_cart_variation_params != 'undefined'){
+							message = wc_add_to_cart_variation_params.i18n_make_a_selection_text ?? '';
+						}
+					}
+					button.attr('data-message', message);
 				}
 			}
 
 			this.addHidden = function () {
 				var $ = jQuery;
+				var parent = this;
 				$(document).on("click", ".pisol_single_buy_now", function (e) {
 					/*
 					$(this).after('<input type="hidden" name="pi_quick_checkout" value="true"/>');
 					*/
+					if($(this).hasClass('disabled')){
+						e.preventDefault();
+						parent.showWarning($(this));
+						return;
+					}
+
 					$(this).off('click', function () {
 						$(this).trigger('click');
 					});
@@ -108,6 +135,13 @@
 					$(document).trigger('pisol_dtt_buy_now_clicked', [this]);
 					jQuery(document.body).off('submit', 'form.cart');
 				});
+			}
+
+			this.showWarning = function (button) {
+				var message = button.attr("data-message");
+				if(message){
+					alert(message);
+				}
 			}
 		}
 	});

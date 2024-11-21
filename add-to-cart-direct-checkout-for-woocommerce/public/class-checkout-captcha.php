@@ -53,7 +53,8 @@ class Checkout_Captcha {
 
         add_action($position, [$this, 'custom_checkout_captcha_field']);
         
-        add_action('woocommerce_checkout_process', [$this, 'validate_checkout_captcha_field']);
+        add_filter( 'woocommerce_checkout_posted_data', array($this, 'postedData') );
+        add_action('woocommerce_after_checkout_validation', [$this, 'validate_checkout_captcha_field'],10,2);
 
         add_action('woocommerce_checkout_order_processed', [$this, 'clear_captcha_session_after_checkout']);
 
@@ -75,6 +76,7 @@ class Checkout_Captcha {
         $placeholder = $this->get_captcha_placeholder();
         $refresh_title = $this->get_refresh_captcha_title();
 
+        echo '<div id="pi_dcw_captcha_container">';
         echo '<div id="pi_dcw_captcha">';
         echo '<input type="text" name="captcha_field" id="captcha_field" class="input-text" required placeholder="'.esc_attr($placeholder).'">';
         echo '<div class="captcha_image_container">';
@@ -82,20 +84,26 @@ class Checkout_Captcha {
         echo '</div>';
         echo '<a href="#" id="refresh_captcha" title="'.esc_attr($refresh_title).'"><img src="'.esc_url(plugin_dir_url( __FILE__ ).'img/refresh.svg').'" id="captcha_refresh_icon">.</a>';
         echo '</div>';
+        echo '</div>';
     }
 
-    public function validate_checkout_captcha_field() {
+    function postedData($data){
+        $data['captcha_field'] = isset($_POST['captcha_field']) ? sanitize_text_field($_POST['captcha_field']) : '';
+        return $data;
+    }
+
+    public function validate_checkout_captcha_field($data, $errors) {
         $captcha = WC()->session->get('pi_dcw_captcha');
 
-        if ( empty($_POST['captcha_field'])) {
+        if ( empty($data['captcha_field'])) {
             $missing_error = $this->get_error_blank_captcha();
-            wc_add_notice($missing_error , 'error', ['id' => 'captcha-error']);
+            $errors->add('error', $missing_error , ['id' => 'captcha-error']);
             return;
         }
 
-        if (  $_POST['captcha_field'] !== $captcha ) {
+        if (  $data['captcha_field'] !== $captcha ) {
             $mismatch_error = $this->get_error_captcha_mismatch();
-            wc_add_notice($mismatch_error, 'error', ['id' => 'captcha-error']);
+            $errors->add('error', $mismatch_error , ['id' => 'captcha-error']);
         }
     }
 
@@ -263,10 +271,79 @@ class Checkout_Captcha {
         $color_scheme = get_option('pi_dcw_captcha_field_color', '#cccccc');
         $color_scheme_error = get_option('pi_dcw_captcha_field_error_color', '#ff0000');
         $css = "
-        :root {
-            --captcha_color: $color_scheme;
-            --captcha_error_color: $color_scheme_error;
-        }
+            :root {
+                --captcha_color: $color_scheme;
+                --captcha_error_color: $color_scheme_error;
+                --captcha_border:5px;
+            }
+
+            #pi_dcw_captcha_container{
+                display:block;
+                width:100%;
+                margin-bottom:20px;
+                margin-top:20px;
+            }
+
+            #pi_dcw_captcha{
+                display:grid;
+                grid-template-columns: 1fr 200px 50px;
+                border:var(--captcha_border, 5px) solid var(--captcha_color, #ccc);
+                border-radius:6px;
+                max-width:600px;
+            }
+
+            @media (max-width: 600px) {
+                #pi_dcw_captcha{
+                    grid-template-columns: 1fr;
+                }
+                
+                #captcha_field{
+                    border-bottom:1px solid var(--captcha_color, #ccc) !important;
+                }
+            }
+
+            #pi_dcw_captcha.error{
+                border:var(--captcha_border, 5px) solid var(--captcha_error_color, #ff0000);
+            }
+
+            #pi_dcw_captcha.loading{
+                opacity:0.5;
+            }
+
+            .captcha_image_container{
+                padding:3px;
+                text-align:Center;
+                border-left:1px solid var(--captcha_color, #ccc);
+            }
+
+            #captcha_image{
+                margin:auto;
+            }
+
+            #captcha_refresh_icon{
+                width:30px;
+            }
+
+            #refresh_captcha{
+                cursor:pointer;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                background:var(--captcha_color, #ccc);
+                font-size:0px;
+                border-left:1px solid var(--captcha_color, #ccc);
+            }
+
+            #pi_dcw_captcha.error #refresh_captcha{
+                background:var(--captcha_error_color, #ff0000);
+            }
+
+
+            #captcha_field, #captcha_field:focus-visible, #captcha_field:focus{
+                outline: none;
+                border:none;
+                padding:10px;
+            }
         ";
         // Add custom CSS to the checkout page use dummy dependency 
         wp_register_style('pi-dcw-captch-custom-inline-css', false);
