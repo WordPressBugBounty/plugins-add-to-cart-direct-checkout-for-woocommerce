@@ -250,18 +250,6 @@ class Checkout_Captcha {
                     jQuery('#pi_dcw_captcha').removeClass('loading');
                 });
             });
-
-            $(document.body).on('checkout_error',  function (event, error) {
-                var captchaError = $('ul.woocommerce-error li').filter(function() {
-                     return $(this).attr('data-id') === 'captcha-error'; // Check if the li has data-id=\"captcha-error\"
-                });
-
-                 if (captchaError.length) {
-                    $('#pi_dcw_captcha').addClass('error');
-                } else {
-                    $('#pi_dcw_captcha').removeClass('error');
-                }
-            });
         });
         ";
 
@@ -302,7 +290,7 @@ class Checkout_Captcha {
                 }
             }
 
-            #pi_dcw_captcha.error{
+            body:has([data-id=\"captcha-error\"]) #pi_dcw_captcha{
                 border:var(--captcha_border, 5px) solid var(--captcha_error_color, #ff0000);
             }
 
@@ -314,6 +302,9 @@ class Checkout_Captcha {
                 padding:3px;
                 text-align:Center;
                 border-left:1px solid var(--captcha_color, #ccc);
+                background:#ffffff;
+                display:flex;
+                align-items:center;
             }
 
             #captcha_image{
@@ -334,7 +325,7 @@ class Checkout_Captcha {
                 border-left:1px solid var(--captcha_color, #ccc);
             }
 
-            #pi_dcw_captcha.error #refresh_captcha{
+            body:has([data-id=\"captcha-error\"]) #refresh_captcha{
                 background:var(--captcha_error_color, #ff0000);
             }
 

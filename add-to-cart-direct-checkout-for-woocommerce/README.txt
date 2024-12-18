@@ -3,8 +3,8 @@ Contributors: rajeshsingh520
 Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
-Tested up to: 6.7.0
-Stable tag: 2.1.73.40
+Tested up to: 6.7.1
+Stable tag: 2.1.73.41
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,7 @@ WooCommerce direct checkout is a helpful tool to simplify the checkout process.
 * You can show a custom message then user is asked to login before checkout 
 * Sold individually option for the product, so that user can buy only one quantity of that product or variation
 * Ensure that UTM parameters are retained in the "Add to Cart" link to track the order's source. If UTM parameters are present in the URL, they will also be preserved on the checkout page.
+* Safeguard your checkout page from spam (order spam, flood of order in few minutes) with our easy-to-configure CAPTCHA—no need for third-party API keys. This simple yet effective solution provides reliable protection against spam, keeping your checkout process secure and hassle-free.
 
 = Fast checkout =
 WooCommerce Direct Checkout aims to simplify the checkout process, leading to an immediate increase in sales. This plugin for WooCommerce allows you to redirect users to the checkout instead of cart page.
@@ -210,6 +211,9 @@ Yes the Free version and PRO version both are HPOS compatible
 
 = Do the Buy now button behave like Amazon.com buy now button =
 Yes in the pro version you can make the buy now button behave like Amazon.com buy now button. So that when user click on buy now button they are redirected to the checkout page, and the product is added to the cart, so they can checkout with that product only, and other product in the cart will be left in the cart for future checkout.
+
+= How to stop spam in WooCommerce orders? / How to prevent spam orders? =
+You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCHA on checkout page" in the Checkout settings tab, this will show a simple captcha on the checkout page, so that only human can place the order
 
 == Changelog ==
 
