@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Language: \n"
-"POT-Creation-Date: 2022-02-11 03:58+0000\n"
+"POT-Creation-Date: 2024-12-30 01:00+0000\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Loco https://localise.biz/"
@@ -11,45 +11,69 @@ msgstr ""
 msgid "\" target=\"_blank\">Checkout page tab</a></strong>"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:79
+#: admin/class-pi-dcw-checkout.php:80
 msgid ""
 "\" target=\"_blank\">Enable single page checkout</a>\" so disable the "
 "\"Enable single page checkout\" option in Basic Setting tab first</div>"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:37
+#: admin/class-sold-individually.php:36
+msgid ""
+"Activate this option to permit the purchase of only one unit of this product,"
+" even if it's a distinct variation, in a single order."
+msgstr ""
+
+#: admin/class-sold-individually.php:81
+msgid ""
+"Activate this option to restrict the purchase of more than one unit of this "
+"variation in a single order."
+msgstr ""
+
+#: admin/class-pi-dcw-add-to-cart.php:76
+msgid "Add To Cart"
+msgstr ""
+
+#: admin/class-pi-dcw-add-to-cart.php:39
 msgid "Add to Cart button"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:41
+#: admin/class-pi-dcw-add-to-cart.php:43
 msgid "Add to cart button text"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:41 admin/class-pi-dcw-buy-now.php:54
+#: admin/class-pi-dcw-buy-now.php:48 admin/class-pi-dcw-buy-now.php:61
 msgid "After add to cart button"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:41
+#: admin/class-pi-dcw-buy-now.php:48
 msgid "After add to cart form"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:66
+#: admin/class-sold-individually.php:35
+msgid "Apply “Sold individually” to variations"
+msgstr ""
+
+#: admin/class-pi-dcw-buy-now.php:71
 msgid "Background color"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:66
+#: admin/class-pi-dcw-buy-now.php:71
 msgid "Background color of Buy now button"
+msgstr ""
+
+#: admin/class-pi-dcw-option.php:91
+msgid "Basic setting"
 msgstr ""
 
 #: public/quickview/class-pi-dcw-quickview.php:34
 msgid "Basic Setting Quick View"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:41 admin/class-pi-dcw-buy-now.php:54
+#: admin/class-pi-dcw-buy-now.php:48 admin/class-pi-dcw-buy-now.php:61
 msgid "Before add to cart button"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:41
+#: admin/class-pi-dcw-buy-now.php:48
 msgid "Before add to cart form"
 msgstr ""
 
@@ -57,63 +81,99 @@ msgstr ""
 msgid "Button Design"
 msgstr ""
 
-#: public/class-pi-dcw-buy-now.php:24 public/class-pi-dcw-buy-now.php:25
+#: public/class-pi-dcw-buy-now.php:34 public/class-pi-dcw-buy-now.php:35
 msgid "Buy Now"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:64
+#: admin/class-pi-dcw-buy-now.php:90
+msgid "Buy Now Button"
+msgstr ""
+
+#: admin/class-pi-dcw-buy-now.php:69
 msgid "Buy now Button design"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:39 admin/class-pi-dcw-buy-now.php:52
+#: admin/class-pi-dcw-buy-now.php:46 admin/class-pi-dcw-buy-now.php:59
 msgid "Buy now button label"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:50
+#: admin/class-pi-dcw-buy-now.php:57
 msgid "Buy now button on product archive page"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:50
+#: admin/class-pi-dcw-buy-now.php:57
 msgid "Buy now button on Product archive page like loop , category"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:37
+#: admin/class-pi-dcw-buy-now.php:44
 msgid "Buy now button on product page"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:37
+#: admin/class-pi-dcw-buy-now.php:44
 msgid "Buy now button on single product page"
 msgstr ""
 
-#: pi-dcw.php:113
+#: pi-dcw.php:123
 msgid "Buy PRO Version"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:43 admin/class-pi-dcw-buy-now.php:56
+#: admin/class-pi-dcw-checkout.php:124 admin/class-pi-dcw-checkout.php:125
+msgid "Captcha cant be left empty"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:115
+msgid "Captcha field color scheme"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:117
+msgid "Captcha field error color scheme"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:123
+msgid "Captcha field placeholder"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:121
+msgid "Captcha string length"
+msgstr ""
+
+#: admin/class-pi-dcw-buy-now.php:50 admin/class-pi-dcw-buy-now.php:63
 msgid "Cart"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:39
+#: admin/class-pi-dcw-add-to-cart.php:41
 msgid "Change Add to cart button text"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:83
+#: admin/class-pi-dcw-checkout.php:84
 msgid "Change quantity of product"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:43 admin/class-pi-dcw-buy-now.php:56
+#: admin/class-pi-dcw-buy-now.php:50 admin/class-pi-dcw-buy-now.php:63
 msgid "Checkout"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:86
+#: admin/class-pi-dcw-checkout.php:92
 msgid "Checkout field setting"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:95
+#: admin/class-pi-dcw-checkout.php:101
 msgid "Checkout redirect setting / Custom thankyou page"
 msgstr ""
 
-#: admin/class-pi-dcw-menu.php:21 admin/class-pi-dcw-menu.php:22
+#: admin/class-pi-dcw-checkout.php:156
+msgid "Checkout setting"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:109
+msgid "Checkout spam protection"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:88
+msgid "Customer cant checkout without login"
+msgstr ""
+
+#: admin/class-pi-dcw-menu.php:22 admin/class-pi-dcw-menu.php:23
 msgid "Direct Checkout"
 msgstr ""
 
@@ -132,12 +192,16 @@ msgid ""
 "Disable cart page, so all the cart page will be redirected to checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:59
+#: admin/class-pi-dcw-option.php:61
 msgid "Disable continue shopping button"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:39
+#: admin/class-pi-dcw-add-to-cart.php:41
 msgid "Do you want to change the button text of add to cart button"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:111
+msgid "Enable captcha on checkout page"
 msgstr ""
 
 #: public/quickview/class-pi-dcw-quickview.php:55
@@ -148,7 +212,7 @@ msgstr ""
 msgid "Enable Quick View button"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:51
+#: admin/class-pi-dcw-option.php:53
 msgid "Enable redirect on add to cart"
 msgstr ""
 
@@ -158,6 +222,10 @@ msgstr ""
 
 #: admin/class-pi-dcw-woo.php:60
 msgid "Exclude this product from any redirect"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:86
+msgid "Force login before checkout"
 msgstr ""
 
 #. Author URI of the plugin
@@ -170,7 +238,7 @@ msgid ""
 "woocommerce-pro/"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:55
+#: admin/class-pi-dcw-option.php:57
 msgid ""
 "If you have enabled the first option \"Enable redirect\" and you don't "
 "select any page in here then customer will be redirected to checkout page "
@@ -178,41 +246,51 @@ msgid ""
 "select here"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:83
+#: public/class-checkout-captcha.php:39
+msgid ""
+"Image generation module not installed in your server, make sure to install "
+"GD or Imagick library for PHP to use Captcha for checkout page"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:84
 msgid ""
 "It will allow customer to change the quantity of product in the checkout "
 "page itself"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:81
+#: admin/class-pi-dcw-checkout.php:82
 msgid ""
 "It will show remove button before each product in the checkout page so "
 "customer can remove it without leaving checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:39 admin/class-pi-dcw-buy-now.php:52
+#: admin/class-pi-dcw-buy-now.php:46 admin/class-pi-dcw-buy-now.php:59
 msgid "Label of the buy now button"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:91
+#: admin/class-pi-dcw-checkout.php:97
 msgid "Link product name in checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:48
+#: admin/class-pi-dcw-checkout.php:90
+msgid "Message shown on login page"
+msgstr ""
+
+#: admin/class-pi-dcw-buy-now.php:55
 msgid "On product archive page"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:35
+#: admin/class-pi-dcw-buy-now.php:42
 msgid "On product page"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:51
+#: admin/class-pi-dcw-option.php:53
 msgid ""
 "Once enabled, after clicking add to cart button customer will be directly "
 "redirected to Checkout page or the page selected by you in below setting"
 msgstr ""
 
-#: admin/class-pi-dcw-woo.php:64
+#: admin/class-pi-dcw-woo.php:65
 msgid "Overwrite global redirect setting"
 msgstr ""
 
@@ -220,15 +298,23 @@ msgstr ""
 msgid "PI Websolution"
 msgstr ""
 
-#: pi-dcw.php:63
+#: pi-dcw.php:64
 msgid ""
 "Please Install and Activate WooCommerce plugin, without that this plugin "
 "cant work"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:41 admin/class-pi-dcw-buy-now.php:54
-#: admin/class-pi-dcw-buy-now.php:54
+#: admin/class-pi-dcw-buy-now.php:48 admin/class-pi-dcw-buy-now.php:61
+#: admin/class-pi-dcw-buy-now.php:61
 msgid "Position of the button"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:113
+msgid "Position of the captcha"
+msgstr ""
+
+#: public/quickview/class-pi-dcw-quickview.php:86
+msgid "Quick View"
 msgstr ""
 
 #: public/quickview/class-pi-dcw-quickview.php:39
@@ -239,94 +325,102 @@ msgstr ""
 msgid "Quick view popup box design"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:45
+#: admin/class-pi-dcw-add-to-cart.php:47
 msgid "Read more button text"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:49
+#: admin/class-pi-dcw-option.php:51
 msgid "Redirect Setting"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:43 admin/class-pi-dcw-buy-now.php:56
+#: admin/class-pi-dcw-buy-now.php:50 admin/class-pi-dcw-buy-now.php:63
 msgid "Redirect to cart or checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:43 admin/class-pi-dcw-buy-now.php:56
+#: admin/class-pi-dcw-buy-now.php:50 admin/class-pi-dcw-buy-now.php:63
 msgid "Redirect to cart/checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:53 admin/class-pi-dcw-option.php:57
+#: admin/class-pi-dcw-option.php:55 admin/class-pi-dcw-option.php:59
 msgid "Redirect to custom url"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:53
+#: admin/class-pi-dcw-option.php:55
 msgid ""
 "Redirect to custom url instead of page, so using this you can redirect to "
 "category page, tag page or post, or any third website url"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:55
+#: admin/class-pi-dcw-option.php:57
 msgid "Redirect to page"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:57
+#: admin/class-pi-dcw-option.php:59
 msgid ""
 "Redirect to this any custom url of your website e.g.: http://yourwebsite."
 "com<br> <strong>(PRO version even allows you to redirect to external website "
 "link as well)</strong>"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:90
+#: public/class-checkout-captcha.php:363
+msgid "Refresh the CAPTCHA"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:96
 msgid ""
 "Remove all the option of shipping field \"Ship to a different address?\""
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:92
+#: admin/class-pi-dcw-checkout.php:98
 msgid "Remove billing fields"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:89
+#: admin/class-pi-dcw-checkout.php:95
 msgid "Remove coupon field from checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:88
+#: admin/class-pi-dcw-checkout.php:94
 msgid "Remove order comment"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:62
-msgid "Remove other product from cart"
-msgstr ""
-
-#: admin/class-pi-dcw-checkout.php:81
+#: admin/class-pi-dcw-checkout.php:82
 msgid "Remove product option on checkout page"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:93
+#: admin/class-pi-dcw-checkout.php:99
 msgid "Remove shipping fields"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:43
+#: admin/class-pi-dcw-add-to-cart.php:48
+msgid "Retain UTM parameter in add-to-cart url"
+msgstr ""
+
+#: admin/class-pi-dcw-add-to-cart.php:45
 msgid "Select options button text"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:110 admin/class-pi-dcw-option.php:69
-#: admin/class-pi-dcw-woo.php:122
+#: admin/class-pi-dcw-checkout.php:136 admin/class-pi-dcw-option.php:71
+#: admin/class-pi-dcw-woo.php:126
 msgid "Select page"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:97
+#: admin/class-pi-dcw-checkout.php:119
+msgid "Select type of string to use in the captcha"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:103
 msgid "Set custom thankyou page"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:99
+#: admin/class-pi-dcw-checkout.php:105
 msgid "Set this page as thank you page"
 msgstr ""
 
-#: pi-dcw.php:112
+#: pi-dcw.php:122
 msgid "Settings"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:58
+#: admin/class-pi-dcw-buy-now.php:65
 msgid "Show buy now option on variable product, on category / Shop page"
 msgstr ""
 
@@ -337,25 +431,25 @@ msgid ""
 "block) "
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:68
+#: admin/class-pi-dcw-buy-now.php:73
 msgid "Text color"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:68
+#: admin/class-pi-dcw-buy-now.php:73
 msgid "Text color of Buy now button"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:41
+#: admin/class-pi-dcw-add-to-cart.php:43
 msgid "This text will be shown inside add to cart button"
 msgstr ""
 
-#: admin/class-pi-dcw-add-to-cart.php:43
+#: admin/class-pi-dcw-add-to-cart.php:45
 msgid ""
 "This text will be shown on the archive page for the variable product, leave "
 "blank if you want to use default text"
 msgstr ""
 
-#: admin/class-pi-dcw-buy-now.php:58
+#: admin/class-pi-dcw-buy-now.php:65
 msgid ""
 "this will show the buy now button for variable product, and this buy now "
 "button will add the first variation of that product to cart <strong "
@@ -364,11 +458,22 @@ msgid ""
 "work</strong>"
 msgstr ""
 
-#: admin/class-pi-dcw-checkout.php:101
+#: admin/class-pi-dcw-option.php:49
+msgid "Use old implementation of single page checkout"
+msgstr ""
+
+#: admin/class-pi-dcw-checkout.php:107
 msgid "Use this custom url as thankyou page"
 msgstr ""
 
-#: admin/class-pi-dcw-option.php:59
+#: admin/class-pi-dcw-option.php:49
+msgid ""
+"We change changed the way we implemented single page checkout it will not "
+"make any difference to you but if you face any issue in checkout page layout "
+"you can fall back to old way using this setting"
+msgstr ""
+
+#: admin/class-pi-dcw-option.php:61
 msgid ""
 "WooCommerce shows a continue shopping button after a product is added to "
 "cart, with this option you can disable that link so user remain on checkout "
@@ -382,7 +487,7 @@ msgid ""
 "can redirect user directly to checkout as they click add to cart"
 msgstr ""
 
-#: pi-dcw.php:51
+#: pi-dcw.php:52
 msgid ""
 "You have pro version of add to cart redirect active please deactivate the "
 "pro version first and then activate free version"
