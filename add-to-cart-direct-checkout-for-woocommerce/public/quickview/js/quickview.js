@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
             },
             callbacks: {
                 ajaxContentAdded: function () {
-                    var form_variation = jQuery('body').find('.variations_form');
+                    var form_variation = jQuery('body').find('form.variations_form');
                     form_variation.wc_variation_form();
                     jQuery('body').find('.woocommerce-product-gallery').flexslider({
                         selector: '.woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image',
@@ -27,7 +27,8 @@ jQuery(document).ready(function ($) {
                         },
                         controlNav: 'thumbnails',
                         slideshow: false,
-                        smoothHeight: false
+                        smoothHeight: false,
+                        animation:'slide'
 
                     });
                 }

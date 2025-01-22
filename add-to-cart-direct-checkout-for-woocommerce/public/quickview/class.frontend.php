@@ -78,7 +78,7 @@ class pisol_dcw_quick_view_frontend{
 		wp_enqueue_script( 'pisol_magnific_script', $this->pisol_plugin_dir_url.'js/jquery.magnific-popup.min.js',array('jquery','wc-add-to-cart-variation'),'1.0', true);
 		
 		wp_enqueue_style  ( 'pisol_remodal_default_css',    $this->pisol_plugin_dir_url.'css/quickview.css');
-		wp_enqueue_script( 'pisol_quick_view', $this->pisol_plugin_dir_url.'js/quickview.js',array('jquery','pisol_magnific_script','flexslider'),'1.0', true);
+		wp_enqueue_script( 'pisol_quick_view', $this->pisol_plugin_dir_url.'js/quickview.js',array('jquery','pisol_magnific_script','flexslider'),PI_DCW_VERSION, true);
 
 		$frontend_data = array(
 
