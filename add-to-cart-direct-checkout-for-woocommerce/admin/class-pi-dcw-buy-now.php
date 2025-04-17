@@ -112,4 +112,6 @@ class Class_Pi_Dcw_Buy_Now{
    
 }
 
-new Class_Pi_Dcw_Buy_Now($this->plugin_name);
+add_action('init', function(){
+    new Class_Pi_Dcw_Buy_Now($this->plugin_name);
+});

@@ -138,4 +138,6 @@ class Class_Pi_Dcw_AddToCart{
     
 }
 
-new Class_Pi_Dcw_AddToCart($this->plugin_name);
+add_action('init', function(){
+    new Class_Pi_Dcw_AddToCart($this->plugin_name);
+});

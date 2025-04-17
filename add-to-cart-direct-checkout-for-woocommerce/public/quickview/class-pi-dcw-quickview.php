@@ -108,4 +108,6 @@ class Class_Pi_Dcw_Quick_View{
    
 }
 
-new Class_Pi_Dcw_Quick_View($this->plugin_name);
+add_action('init', function(){
+    new Class_Pi_Dcw_Quick_View($this->plugin_name);
+});

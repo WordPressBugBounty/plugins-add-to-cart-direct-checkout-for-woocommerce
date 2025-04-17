@@ -113,4 +113,6 @@ class Class_Pi_Dcw_Option{
     
 }
 
-new Class_Pi_Dcw_Option($this->plugin_name);
+add_action('init', function(){
+    new Class_Pi_Dcw_Option($this->plugin_name);
+});

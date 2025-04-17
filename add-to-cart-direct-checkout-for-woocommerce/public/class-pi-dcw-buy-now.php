@@ -31,8 +31,8 @@ class Pi_WooCommerce_Quick_Buy_Auto_Add {
 	public function __construct() {
 		$this->show_on_product = $this->showOnProduct();
 		$this->show_on_archive = $this->showOnArchive();
-		$this->label_product = __('Buy Now','pi-dcw');
-		$this->label_loop = __('Buy Now','pi-dcw');
+		$this->label_product = __('Buy Now');
+		$this->label_loop = __('Buy Now');
 
 		$this->product_position = 'after_button';
 		$this->loop_position = 'after_button';
@@ -110,6 +110,8 @@ class Pi_WooCommerce_Quick_Buy_Auto_Add {
 		$product_id = $product->get_id();
 		$class = 'pisol_type_'.$product->get_type();
 
+		$this->label_loop = __('Buy Now','pi-dcw');
+
 
 		echo '<button class="button pisol_single_buy_now pisol_buy_now_button '.esc_attr( $class ).'" type="submit" name="pi_quick_checkout" value="'.esc_attr($product_id).'">'.esc_html( $this->label_loop ).'</button>';
 
@@ -129,6 +131,7 @@ class Pi_WooCommerce_Quick_Buy_Auto_Add {
 	
 	public function add_shop_quick_buy_button() {
 		global $product;
+		$this->label_loop = __('Buy Now','pi-dcw');
 		if ( $product->get_type() == 'simple' ) {
 			$link  = $this->get_product_addtocartLink($product, 1, $this->loop_redirect);
 			if($link !== false && $product->is_in_stock()){

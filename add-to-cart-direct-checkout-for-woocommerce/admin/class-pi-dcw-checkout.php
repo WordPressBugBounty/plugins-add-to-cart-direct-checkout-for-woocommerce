@@ -187,4 +187,6 @@ class Class_Pi_Dcw_Checkout{
     }
 }
 
-new Class_Pi_Dcw_Checkout($this->plugin_name);
+add_action('init', function(){
+    new Class_Pi_Dcw_Checkout($this->plugin_name);
+});
