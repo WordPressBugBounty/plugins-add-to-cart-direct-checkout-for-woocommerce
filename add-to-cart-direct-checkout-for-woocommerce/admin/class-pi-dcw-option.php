@@ -105,7 +105,7 @@ class Class_Pi_Dcw_Option{
                 new pisol_class_form_dcw($setting, $this->setting_key);
             }
         ?>
-        <input type="submit" class="mt-3 btn btn-primary btn-sm" value="Save Option" />
+        <input type="submit" class="mt-3 btn btn-primary btn-md" value="Save Option" />
         </form>
        <?php
     }

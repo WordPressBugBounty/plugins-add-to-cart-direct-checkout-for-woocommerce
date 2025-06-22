@@ -95,7 +95,7 @@ class Pi_Dcw_Menu{
                     <a class="btn btn-success btn-sm text-uppercase mb-2 " href="<?php echo esc_url(PI_DCW_BUY_URL); ?>&utm_ref=top_link" target="_blank">Buy Now !!</a>
                     <a class="btn btn-sm mb-2 btn-secondary text-uppercase" href="https://websitemaintenanceservice.in/dcw_demo/" target="_blank">Try Demo</a>
                 </div>
-                <h2 id="pi-banner-tagline" class="mb-0">Get Pro for <?php echo esc_html(PI_DCW_PRICE); ?> Only</h2>
+                <!--<h2 id="pi-banner-tagline" class="mb-0">Get Pro for <?php echo esc_html(PI_DCW_PRICE); ?> Only</h2>-->
                 <div class="inside mt-2">
                     <ul class="text-left pisol-pro-feature-list">
                     <li >Our Redirect also works with <span class="font-weight-bold text-primary">Ajax add to cart</span> button</li>

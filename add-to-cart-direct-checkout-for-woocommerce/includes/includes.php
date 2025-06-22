@@ -9,6 +9,7 @@ require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pi-dcw-add-to
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pi-dcw-buy-now.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/plugins.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-sold-individually.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-analytics.php';
 
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/quickview/class-pi-dcw-quickview.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pi-dcw-woo.php';

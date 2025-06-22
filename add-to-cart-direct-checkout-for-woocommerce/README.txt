@@ -3,8 +3,8 @@ Contributors: rajeshsingh520
 Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
-Tested up to: 6.8.0
-Stable tag: 2.1.73.61
+Tested up to: 6.8.1
+Stable tag: 2.1.73.62
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -217,6 +217,9 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 
 == Changelog ==
 
+= 2.1.73.62 =
+* Direct checkout for WooCommerce is now compatible with WC 9.9.3
+
 = 2.1.73.61 =
 * Tested for WC 9.8.5
 
@@ -291,3 +294,15 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 
 = 2.1.73.1 =
 * Small change in checkout quantity changer, now it will have cart item as id rather then random id 
+
+== Privacy ==
+
+If you choose to opt in from the plugin settings, or submit optional feedback during deactivation, this plugin may collect basic technical information, including:
+
+- Plugin version  
+- WordPress version  
+- WooCommerce version  
+- Site url
+- Deactivation reason (if submitted)
+
+This data is used solely to improve plugin quality, compatibility, and features. No personal or user-specific data is collected without consent.
