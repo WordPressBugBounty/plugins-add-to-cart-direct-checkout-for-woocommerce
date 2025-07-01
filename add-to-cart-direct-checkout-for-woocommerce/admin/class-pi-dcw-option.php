@@ -40,7 +40,7 @@ class Class_Pi_Dcw_Option{
         add_action($this->plugin_name.'_tab', array($this,'tab'),1);
 
         $this->settings = array(
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Single page / One page Checkout setting<br>(Your checkout page should be made using [woocommerce_checkout] shortcode  and not by WooCommerce content block) ','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Single page / One page Checkout setting<br>(Your checkout page should be made using [woocommerce_checkout] shortcode  and not by WooCommerce content block) ','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_disable_cart','desc'=>__('Disable cart page, so all the cart page will be redirected to checkout page','pi-dcw'), 'label'=>__('Disable cart page','pi-dcw'),'type'=>'switch', 'default'=>1),
 
@@ -48,7 +48,7 @@ class Class_Pi_Dcw_Option{
 
             array('field'=>'pi_dcw_use_old_way','desc'=>__('We change changed the way we implemented single page checkout it will not make any difference to you but if you face any issue in checkout page layout you can fall back to old way using this setting','pi-dcw'), 'label'=>__('Use old implementation of single page checkout','pi-dcw'),'type'=>'switch', 'default'=>0),
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Redirect Setting','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Redirect Setting','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_global_redirect','desc'=>__('Once enabled, after clicking add to cart button customer will be directly redirected to Checkout page or the page selected by you in below setting','pi-dcw'), 'label'=>__('Enable redirect on add to cart','pi-dcw'),'type'=>'switch', 'default'=>1),
             
@@ -91,7 +91,7 @@ class Class_Pi_Dcw_Option{
         $this->tab_name = __('Basic setting','pi-dcw');
         ?>
         <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.sanitize_text_field($_GET['page']).'&tab='.$this->this_tab ) ); ?>">
-            <?php echo esc_html( $this->tab_name ); ?> 
+           <span class="dashicons dashicons-admin-generic"></span> <?php echo esc_html( $this->tab_name ); ?> 
         </a>
         <?php
     }
@@ -105,7 +105,7 @@ class Class_Pi_Dcw_Option{
                 new pisol_class_form_dcw($setting, $this->setting_key);
             }
         ?>
-        <input type="submit" class="mt-3 btn btn-primary btn-md" value="Save Option" />
+        <input type="submit" class="my-3 btn btn-primary btn-md" value="Save Option" />
         </form>
        <?php
     }

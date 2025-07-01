@@ -96,20 +96,12 @@
 	display:block;
 }
 
-h2#pi-banner-tagline{
-padding:10px;
-background:#ee6443;
-color:#fff !important;
-font-size:1.5rem !important;
-text-align:center;
-}
-
 .pisol-pro-feature-list{
   font-size:1rem;
   font-weight:400;
 }
 
 .pisol-pro-feature-list li{
-  padding:15px !important;
-  font-size:1.1rem;
+  padding:5px !important;
+  font-size:1rem;
 }

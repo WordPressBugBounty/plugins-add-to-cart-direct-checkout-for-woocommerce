@@ -3,8 +3,8 @@ Contributors: rajeshsingh520
 Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
-Tested up to: 6.8.1
-Stable tag: 2.1.73.62
+Tested up to: 6.8
+Stable tag: 2.1.73.63
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -216,6 +216,9 @@ Yes in the pro version you can make the buy now button behave like Amazon.com bu
 You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCHA on checkout page" in the Checkout settings tab, this will show a simple captcha on the checkout page, so that only human can place the order
 
 == Changelog ==
+
+= 2.1.73.63 =
+* Direct checkout for WooCommerce is now compatible with WC 9.9.5
 
 = 2.1.73.62 =
 * Direct checkout for WooCommerce is now compatible with WC 9.9.3

@@ -77,19 +77,19 @@ class Class_Pi_Dcw_Checkout{
         $url = admin_url( 'admin.php?page=pi-dcw&tab=default#row_pi_dcw_single_page_checkout' );
 
         $this->settings = array(
-            array('field'=>'option_to_remove_qty_on_checkout', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Change and Remove Quantity on checkout page <div class="pi-checkout-qty-edit-conflict-warning '.$warning.'">This options can\'t be used along with "<a href="'.$url.'" target="_blank">Enable single page checkout</a>" so disable the "Enable single page checkout" option in Basic Setting tab first</div>','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'option_to_remove_qty_on_checkout', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Change and Remove Quantity on checkout page <div class="pi-checkout-qty-edit-conflict-warning '.$warning.'">This options can\'t be used along with "<a href="'.$url.'" target="_blank">Enable single page checkout</a>" so disable the "Enable single page checkout" option in Basic Setting tab first</div>','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_remove_product_from_checkout_page','desc'=>__('It will show remove button before each product in the checkout page so customer can remove it without leaving checkout page','pi-dcw'), 'label'=>__('Remove product option on checkout page','pi-dcw'),'type'=>'switch','default'=>0, 'class'=>$disable),
 
             array('field'=>'pi_dcw_change_quantity_from_checkout_page','desc'=>__('It will allow customer to change the quantity of product in the checkout page itself','pi-dcw'), 'label'=>__('Change quantity of product','pi-dcw'),'type'=>'switch','default'=>0, 'class'=>$disable),
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Force login before checkout','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Force login before checkout','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_force_login','desc'=>'Once enabled customer will not be able to checkout without login', 'label'=>__('Customer cant checkout without login','pi-dcw'),'type'=>'switch','default'=>0),
 
             array('field'=>'pi_dcw_force_login_msg','desc'=>'This message will be shown on the login page when user tries to checkout without login', 'label'=>__('Message shown on login page','pi-dcw'),'type'=>'text', 'default'=>'Please log in or register to complete your purchase.'),
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout field setting','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout field setting','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_remove_order_comment','desc'=>'Remove order comment from the checkout field', 'label'=>__('Remove order comment','pi-dcw'),'type'=>'switch','default'=>0),
             array('field'=>'pi_dcw_remove_have_coupon','desc'=>'Remove Have a Coupon field from the checkout page', 'label'=>__('Remove coupon field from checkout page','pi-dcw'),'type'=>'switch','default'=>0),
@@ -98,7 +98,7 @@ class Class_Pi_Dcw_Checkout{
             array('field'=>'pi_dcw_remove_billing_field','desc'=>'Select fields you want to remove from checkout form billing field, Press Ctrl and click to select more then one field<br><strong>This feature will only work if your checkout page is made using WooCommerce shortcode [woocommerce_checkout], It will not work if your checkout page is made of WooCommerce checkout Block,</strong>', 'label'=>__('Remove billing fields','pi-dcw'),'type'=>'multiselect','default'=>"", 'value'=>$billing_fields,'pro'=>true),
             array('field'=>'pi_dcw_remove_shipping_field','desc'=>'Select fields you want to remove from checkout form billing field, Press Ctrl and click to select more then one field<br><strong>This feature will only work if your checkout page is made using WooCommerce shortcode [woocommerce_checkout], It will not work if your checkout page is made of WooCommerce checkout Block,</strong>', 'label'=>__('Remove shipping fields','pi-dcw'),'type'=>'multiselect','default'=>"", 'value'=>$shipping_fields,'pro'=>true),
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout redirect setting / Custom thankyou page','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout redirect setting / Custom thankyou page','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_enable_checkout_redirect','desc'=>'', 'label'=>__('Set custom thankyou page','pi-dcw'),'type'=>'switch','default'=>0,'pro'=>true),
 
@@ -106,7 +106,7 @@ class Class_Pi_Dcw_Checkout{
 
             array('field'=>'pi_dcw_custom_checkout_redirect_url1','desc'=>'Redirect to this url on checkout e.g.: http://yourwebsite.com', 'label'=>__('Use this custom url as thankyou page','pi-dcw'),'type'=>'text', 'pro'=>true),
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout spam protection','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Checkout spam protection','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_enable_checkout_captcha','desc'=>'Enable captcha on checkout page', 'label'=>__('Enable captcha on checkout page','pi-dcw'),'type'=>'switch','default'=>0),
 
@@ -156,7 +156,7 @@ class Class_Pi_Dcw_Checkout{
         $this->tab_name = __('Checkout setting','pi-dcw');
         ?>
         <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.sanitize_text_field($_GET['page']).'&tab='.$this->this_tab ) ); ?>">
-        <?php echo esc_html( $this->tab_name ); ?> 
+            <span class="dashicons dashicons-forms"></span> <?php echo esc_html( $this->tab_name ); ?> 
         </a>
         <?php
     }
@@ -170,7 +170,7 @@ class Class_Pi_Dcw_Checkout{
                 new pisol_class_form_dcw($setting, $this->setting_key);
             }
         ?>
-        <input type="submit" class="mt-3 btn btn-primary btn-md" value="Save Option" />
+        <input type="submit" class="my-3 btn btn-primary btn-md" value="Save Option" />
         </form>
        <?php
     }

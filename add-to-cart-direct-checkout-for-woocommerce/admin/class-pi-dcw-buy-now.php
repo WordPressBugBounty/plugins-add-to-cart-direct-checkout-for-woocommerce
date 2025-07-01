@@ -35,11 +35,11 @@ class Class_Pi_Dcw_Buy_Now{
 
         $this->settings = array(
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Buy now Button behavior'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Buy now Button behavior'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_buy_now_behavior','desc'=>'Simple => user will be redirected to the checkout page,<br> Advance => user can have many product in his cart but he can checkout with this single product leaving other product in his cart (this make the buy now behave like <b>amazon.com</b> buy now button)', 'label'=>__('Buy not behavior'),'type'=>'select', 'default'=>'simple', 'value'=>array('simple'=>'Simple', 'advance'=>'Advance (Like Amazon.com buy now button)'), 'pro'=>true),
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('On product page','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('On product page','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_enable_buy_now_button','desc'=>__('Buy now button on single product page','pi-dcw'), 'label'=>__('Buy now button on product page','pi-dcw'),'type'=>'switch', 'default'=>0),
 
@@ -52,7 +52,7 @@ class Class_Pi_Dcw_Buy_Now{
             array('field'=>'pisol_dcw_button_size','desc'=>'Buy now button size on product page (PX)', 'label'=>__('Buy now button size on product page'),'type'=>'number', 'default'=>'', 'min'=>100, 'placeholder'=>'px'),
 
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('On product archive page','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('On product archive page','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_enable_buy_now_button_loop','desc'=>__('Buy now button on Product archive page like loop , category','pi-dcw'), 'label'=>__('Buy now button on product archive page','pi-dcw'),'type'=>'switch', 'default'=>0),
 
@@ -66,7 +66,7 @@ class Class_Pi_Dcw_Buy_Now{
 
             
 
-            array('field'=>'sunday', 'class'=> 'bg-secondary text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Buy now Button design','pi-dcw'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Buy now Button design','pi-dcw'), 'type'=>'setting_category'),
 
             array('field'=>'pi_dcw_buy_now_bg_color','desc'=>__('Background color of Buy now button','pi-dcw'), 'label'=>__('Background color','pi-dcw'),'type'=>'color', 'default'=>'#ee6443'),
 
@@ -90,7 +90,7 @@ class Class_Pi_Dcw_Buy_Now{
         $this->tab_name = __('Buy Now Button','pi-dcw');
         ?>
         <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.sanitize_text_field($_GET['page']).'&tab='.$this->this_tab ) ); ?>">
-        <?php echo esc_html( $this->tab_name ); ?> 
+            <span class="dashicons dashicons-yes"></span> <?php echo esc_html( $this->tab_name ); ?> 
         </a>
         <?php
     }
@@ -104,7 +104,7 @@ class Class_Pi_Dcw_Buy_Now{
                 new pisol_class_form_dcw($setting, $this->setting_key);
             }
         ?>
-        <input type="submit" class="mt-3 btn btn-primary btn-md" value="Save Option" />
+        <input type="submit" class="my-3 btn btn-primary btn-md" value="Save Option" />
         </form>
        <?php
     }
