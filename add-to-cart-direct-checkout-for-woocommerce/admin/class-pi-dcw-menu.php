@@ -83,7 +83,7 @@ class Pi_Dcw_Menu{
         <?php if(  !pi_dcw_pro_check() ) : ?>
         <div class="col-12 col-sm-12 col-md-4 pt-3 border-left">
             
-           <div class="pi-shadow px-3 py-3 ">
+           <div class="pi-shadow px-3 py-3 rounded">
                 <h2 id="pi-banner-tagline" class="mb-0 mt-3" style="color:#ccc !important;">
                         <span class="d-block mb-4">⭐️⭐️⭐️⭐️⭐️</span>
                         <span class="d-block mb-2">🚀 Trusted by <span style="color:#fff;">10,000+</span> WooCommerce Stores</span>
@@ -115,7 +115,7 @@ class Pi_Dcw_Menu{
                     <h4 class="pi-bottom-banner">🔥 Unlock all features and grow your sales!</h4>
 
                     <div class="text-center pb-3">
-                    <a class="btn btn-primary btn-lg mt-2 mb-2" href="<?php echo esc_url( PI_DCW_BUY_URL ); ?>" target="_blank">🔓 Unlock Pro Now – Limited Time Price!</a>
+                    <a class="btn btn-primary btn-md mt-2 mb-2" href="<?php echo esc_url( PI_DCW_BUY_URL ); ?>" target="_blank">🔓 Unlock Pro Now – Limited Time Price!</a>
                     </div>
                 </div>
             </div>

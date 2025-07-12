@@ -32,6 +32,7 @@
 	--danger: #dc3545;
 	--light: #ffffff;
 	--dark: #1a4562;
+	--dark2:rgba(26, 69, 98, 0.75);
 	--breakpoint-xs: 0;
 	--breakpoint-sm: 576px;
 	--breakpoint-md: 768px;
@@ -7113,6 +7114,10 @@
 	background-color: #1a4562 !important;
 }
 
+.bootstrap-wrapper .bg-dark2 {
+	background-color: var(--dark2) !important;
+}
+
 .bootstrap-wrapper a.bg-dark:focus,
 .bootstrap-wrapper a.bg-dark:hover,
 .bootstrap-wrapper button.bg-dark:focus,
@@ -11368,9 +11373,9 @@ svg{
 
 .pisol-form-element-row small{
 	color:#1a4562;
-	opacity:0.7;
 	margin-top:10px;
 	display:block;
+	font-style:italic;
 }
 /* end form */
 
