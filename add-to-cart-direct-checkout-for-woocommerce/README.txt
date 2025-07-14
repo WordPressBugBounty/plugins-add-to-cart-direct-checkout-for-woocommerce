@@ -1,42 +1,39 @@
-=== Direct checkout, Add to cart redirect, Quick purchase button, Buy now button, Quick View button for WooCommerce ===
+=== Add to Cart Redirect for WooCommerce ===
 Contributors: rajeshsingh520
 Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
 Tested up to: 6.8
-Stable tag: 2.1.73.64
+Stable tag: 2.1.73.66
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add to cart will redirects you to the checkout page or your selected custom page, Quick purchase button WooCommerce, Buy now button WooCommerce, Quick View product, option to change quantity on checkout page, Direct checkout with one page checkout
+Features offered: Add to cart redirect, Quick purchase button, Buy now button, Quick View product, option to change quantity on checkout page.
 
 == Description ==
 
-WooCommerce direct checkout is a helpful tool to simplify the checkout process.
+Streamline the shopping experience by sending customers straight to checkout after adding a product to their cart.
 
-* **Redirect to checkout** page after adding to cart
-* Redirect even works with **Ajax add to cart** option
-* You can change **redirect page**, and make it other than the checkout page
-* You can redirect to even custom URL of your site, so you can redirect them to category page after adding to cart so they can see some more similar product
-* **Remove continue shopping link** that is shown when you add the product to cart
-* **Disable cart page**
-* **Show cart on checkout page**, so the user can modify its cart on the checkout page itself
-* **No need for ShortCode** to make this work
-* Change add to the cart **button text**
-* Change **read more button text** that is shown on the archive page for the product that is out of stock
-* Change **Select options button text** that is shown on the archive page for the variable product
-* **Quick purchase button** can be enabled on product page or product archive pages like shop or category
-* Quick buy support variable product, grouped product as well
-* Quick view option for the product so the customer can see the product from the archive page, in the form of a popup
-* Change quantity on checkout page 
-* Remove product directly from the checkout page
-* One Page Checkout to simplifies the checkout process.
-* change quantity on checkout for WooCommerce: This will allow the customers to change quantity using WooCommerce standard quantity field & delete the product on the WooCommerce checkout page.
-* Force user to login or register before they can go to checkout page, so user will have to login or register to place an order (**Force Authentication Before Checkout for WooCommerce**)
-* You can show a custom message then user is asked to login before checkout 
-* Sold individually option for the product, so that user can buy only one quantity of that product or variation
-* Ensure that UTM parameters are retained in the "Add to Cart" link to track the order's source. If UTM parameters are present in the URL, they will also be preserved on the checkout page.
-* Safeguard your checkout page from spam (order spam, flood of order in few minutes) with our easy-to-configure CAPTCHA—no need for third-party API keys. This simple yet effective solution provides reliable protection against spam, keeping your checkout process secure and hassle-free.
+This plugin helps simplify the buying process by minimizing unnecessary steps and distractions.
+
+= Key Features =
+
+* Automatically redirect users to the checkout or a custom page after adding a product
+* Works with Ajax-based add-to-cart functionality (on categoru and shop pages only)
+* Option to redirect to a category, product, or any custom URL
+* Remove the “Continue Shopping” link
+* Optionally disable the cart page
+* Show cart contents on the checkout page for quick updates
+* Customize labels for “Add to Cart,” “Read More,” and “Select Options” buttons
+* Add a secondary action button to product and shop pages for faster purchasing
+* Display a popup preview of products from archive pages
+* Allow quantity updates and product removal directly from the checkout
+* Enable One Page Checkout to reduce friction
+* Require users to log in or register before checking out
+* Support “Sold individually” settings to limit product quantity
+* Retain UTM parameters for better order source tracking
+* Protect checkout from spam and fake orders using built-in CAPTCHA (no third-party key needed)
+
 
 = Fast checkout =
 WooCommerce Direct Checkout aims to simplify the checkout process, leading to an immediate increase in sales. This plugin for WooCommerce allows you to redirect users to the checkout instead of cart page.
@@ -52,30 +49,28 @@ The whole idea working behind WooCommerce single page checkout is to reduce the 
 Buy Now button for Variable product on Category / Shop / Archive page, so the buyer can directly add the variable product to cart even without seeing its variation. **What it does is it adds the First variation of the variable product in the cart.**
 </blockquote>
 
-**PRO Features**
+= PRO Features =
 
-* **Product-specific overwrite** of global redirect setting
-* **Change the redirect page** for a specific product
-* Change redirect page for a specific product even on **archive product**
-* No other plugin provide product-specific redirect page in **Ajax add to cart**
-* **Disable redirect** for a specific product
-* Set **redirect on a specific product** only
-* Set **custom redirect URL on per product basis**, so when they add that particular product in the cart they get redirected to that specific link that you have set for that product, this will increase your sales. 
-* **Premium support:** We respond to all support topics within 24 hours
-* You can **modify the label of Buy now button** for product page and archive page
-* Change **position of buy now button**
-* **Remove other product from cart** when product is added to cart by Buy now button
-* Change **Quick purchase button redirect** to cart or checkout page 
-* **Disable quick purchase button** for a particular product from product overwrite
-* Change background color of the Quick view module
-* Change text color of the quick view module
-* You can **redirect to external URL**, which is from outside your website.
-* Set any page as **order success page** 
-* Set a **custom thank you page redirect url** after successful order placement
-* You can set **custom thank you page redirect url for each product**, so when user purchases those product they get redirected to their respective thank you page
+* Override the global redirect setting for individual products
+* Set a custom redirect page per product, including on archive pages
+* Supports product-level redirects even with Ajax-based add-to-cart buttons
+* Option to disable redirect for specific products
+* Define unique redirect URLs per product to guide users through targeted funnels
+* Modify the label of the secondary action button for product and archive pages
+* Change the position of the quick purchase or buy button
+* Automatically clear other items from the cart when a new item is added via the quick purchase button
+* Choose whether the quick purchase button redirects to the cart or checkout
+* Disable the quick purchase button for specific products as needed
+* Customize the appearance of the quick view popup, including background and text color
+* Redirect users to an external URL after adding a product, if desired
+* Set any page as the post-purchase success or thank you page
+* Define custom thank you pages for each product, enabling personalized post-checkout experiences
+* Premium support with responses to all queries within 24 hours
 
-== Make Buy now button work like Amazon.com but now button (PRO) ==
-* User have X, Y, Z product in the cart, now he sees the product A and he decides to checkout with A by clicking on Buy now button. So he is taken to the checkout page where he can checkout with only Product A. At the same time product X, Y, Z is still in the cart, so he can checkout with them later.
+== Make the Buy Now Button Work Like Amazon (PRO) ==
+
+Let users quickly purchase a single product without affecting the rest of their cart. For example, if a user already has products X, Y, and Z in the cart and clicks "Buy Now" on product A, they’ll be taken to checkout with just product A. The other items (X, Y, Z) remain in the cart for future purchase.
+
 
 [youtube https://www.youtube.com/watch?v=gC4fO3_1kdU&cc_load_policy=1]
 
@@ -129,17 +124,14 @@ Say someone buys T-shirt then as soon as they add to cart this t-shirt, they get
 = I want to change add to cart button text =
 Yes you can change it from the plugin setting
 
-= You can add Quick purchase / Buy now button =
-When user click this button they will be directly taken to the checkout page
+= Can I enable and customize the quick purchase button? =
+Yes, the plugin lets you add a quick purchase button to product and archive pages, and in the PRO version, you can also change its label.
 
-= You can change the label of buy now button =
-In the pro version, you can change the label of buy now button, and have different labels for product page and product archive pages
-
-= You can disable buy now button for the product archive page =
+= You can disable Quick purchase button for the product archive page =
 Yes you can disable it for product archive page and keep it running for the product page or vice versa
 
-= I want to disable buy now / quick purchase button for specific product =
-Yes you can do that in the pro version, it allows you to disable buy now button on a particular product
+= I want to disable Quick purchase button for specific product =
+Yes you can do that in the pro version, it allows you to disable Quick purchase button on a particular product
 
 = Buy now button is not working on variable product =
 At present, it is not working in the variable product but it will start supporting variable product shortly
@@ -167,8 +159,8 @@ This feature will only work if your checkout page is made using WooCommerce shor
 = I want to redirect to external URL after add to cart =
 Yes you can do that in the pro version
 
-= I want to show the buy now button on the archive page for variable product =
-Pro version does that, when the buyer will click this buy now, it will add the First variation of the product in his cart. 
+= Can I enable one-click checkout for variable products on archive pages? =
+Yes, in the PRO version, a default variation can be added directly to the cart from archive views.
 
 = The buy now button on the archive page is not working for a particular product =
 You have to make sure that you have set the default values of all the required variables for that product. If some required variable is not set for the first variation and you have not set a default for that variable then, in that case, buy now for that product will fail with a warning that "required field can be blank"
@@ -209,22 +201,25 @@ To enable registration option Go to **WooCommerce > Settings > Accounts & Privac
 = Is it HPOS compatible =
 Yes the Free version and PRO version both are HPOS compatible
 
-= Do the Buy now button behave like Amazon.com buy now button =
-Yes in the pro version you can make the buy now button behave like Amazon.com buy now button. So that when user click on buy now button they are redirected to the checkout page, and the product is added to the cart, so they can checkout with that product only, and other product in the cart will be left in the cart for future checkout.
+= Can the Buy Now button behave like Amazon’s one-click checkout? =
+Yes, in the PRO version, the Buy Now button can mimic Amazon-style behavior. When clicked, the customer is redirected to the checkout with only the selected product, while any other items in the cart are saved for later.
 
 = How to stop spam in WooCommerce orders? / How to prevent spam orders? =
 You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCHA on checkout page" in the Checkout settings tab, this will show a simple captcha on the checkout page, so that only human can place the order
 
 == Changelog ==
 
+= 2.1.73.66 =
+* Content change
+
 = 2.1.73.64 =
 * UI improvement in Direct checkout for WooCommerce
 
 = 2.1.73.63 =
-* Direct checkout for WooCommerce is now compatible with WC 9.9.5
+* Compatible with WC 9.9.5
 
 = 2.1.73.62 =
-* Direct checkout for WooCommerce is now compatible with WC 9.9.3
+* Compatible with WC 9.9.3
 
 = 2.1.73.61 =
 * Tested for WC 9.8.5
