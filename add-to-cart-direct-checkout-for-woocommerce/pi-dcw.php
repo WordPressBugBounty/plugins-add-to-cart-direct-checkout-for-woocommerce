@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              piwebsolution.com
- * @since             2.1.73.67
+ * @since             2.1.73.69
  * @package           Pi_Dcw
  *
  * @wordpress-plugin
@@ -17,14 +17,14 @@
  * Requires Plugins:  woocommerce
  * Plugin URI:        https://www.piwebsolution.com/product/add-to-cart-direct-checkout-for-woocommerce-pro/
  * Description:       WooCommerce single page checkout, lets you show cart and checkout option on single page, that is one page checkout for WooCommerce, along with it you can redirect user directly to checkout as they click add to cart
- * Version:           2.1.73.67
+ * Version:           2.1.73.69
  * Author:            PI Websolution
  * Author URI:        https://www.piwebsolution.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       pi-dcw
  * Domain Path:       /languages
- * WC tested up to: 10.0.2
+ * WC tested up to: 10.0.4
  */
 
 // If this file is called directly, abort.
@@ -44,41 +44,40 @@ function pi_dcw_pro_check(){
 	return false;
 }
 
-if(pi_dcw_pro_check()){
-	/** if free version is then deactivate the pro version */
-    function pi_dcw_pro_error_notice() {
+if(pi_dcw_pro_check()){    
+    add_action( 'admin_notices', function () {
         ?>
         <div class="error notice">
             <p><?php esc_html_e( 'You have pro version of add to cart redirect active please deactivate the pro version first and then activate free version', 'pi-dcw' ); ?></p>
         </div>
         <?php
-    }
-    add_action( 'admin_notices', 'pi_dcw_free_error_notice' );
+    } );
+    deactivate_plugins(plugin_basename(__FILE__));
     return;
 }else{
 /** check woocommerce */
 if(!is_plugin_active( 'woocommerce/woocommerce.php')){
-    function pi_dcw_my_error_notice() {
+    
+    add_action( 'admin_notices', function () {
         ?>
         <div class="error notice">
             <p><?php esc_html_e( 'Please Install and Activate WooCommerce plugin, without that this plugin cant work', 'pi-dcw' ); ?></p>
         </div>
         <?php
-    }
-    add_action( 'admin_notices', 'pi_dcw_my_error_notice' );
+    });
     return;
 }
 
 /* buy link and buy price */
 define('PI_DCW_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=1015&variation_id=1824&utm_campaign=direct-checkout&utm_source=website&utm_medium=direct-buy#order_review_heading');
-define('PI_DCW_PRICE', '$19');
+define('PI_DCW_PRICE', '$16');
 
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PI_DCW_VERSION', '2.1.73.67' );
+define( 'PI_DCW_VERSION', '2.1.73.69' );
 define( 'PISOL_DCW_DELETE_SETTING', false );
 
 /**

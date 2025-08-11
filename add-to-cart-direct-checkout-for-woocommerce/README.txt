@@ -4,7 +4,7 @@ Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
 Tested up to: 6.8
-Stable tag: 2.1.73.67
+Stable tag: 2.1.73.69
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ Features offered: Add to cart redirect, Quick purchase button, Buy now button, Q
 Streamline the shopping experience by sending customers straight to checkout after adding a product to their cart.
 
 This plugin helps simplify the buying process by minimizing unnecessary steps and distractions.
+
+[Documentation](https://www.piwebsolution.com/user-documentation-direct-checkout-plugin/)
 
 = Key Features =
 
@@ -208,6 +210,9 @@ Yes, in the PRO version, the Buy Now button can mimic Amazon-style behavior. Whe
 You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCHA on checkout page" in the Checkout settings tab, this will show a simple captcha on the checkout page, so that only human can place the order
 
 == Changelog ==
+
+= 2.1.73.69 =
+* documentation added
 
 = 2.1.73.67 =
 * Tested for WC 10.0.2

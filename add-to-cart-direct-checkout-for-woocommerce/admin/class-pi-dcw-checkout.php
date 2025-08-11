@@ -158,6 +158,9 @@ class Class_Pi_Dcw_Checkout{
         <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.sanitize_text_field($_GET['page']).'&tab='.$this->this_tab ) ); ?>">
             <span class="dashicons dashicons-forms"></span> <?php echo esc_html( $this->tab_name ); ?> 
         </a>
+        <a class=" px-3 text-light d-flex align-items-center  border-left border-right  bg-secondary" href="https://www.piwebsolution.com/user-documentation-direct-checkout-plugin/" target="_blank">
+           <span class="dashicons dashicons-book"></span> Documentation
+        </a>
         <?php
     }
 
