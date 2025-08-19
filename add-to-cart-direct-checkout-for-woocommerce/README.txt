@@ -4,7 +4,7 @@ Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
 Tested up to: 6.8
-Stable tag: 2.1.73.69
+Stable tag: 2.1.73.70
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ This plugin helps simplify the buying process by minimizing unnecessary steps an
 = Key Features =
 
 * Automatically redirect users to the checkout or a custom page after adding a product
-* Works with Ajax-based add-to-cart functionality (on categoru and shop pages only)
+* Works with Ajax-based add-to-cart functionality (on category and shop pages only)
 * Option to redirect to a category, product, or any custom URL
 * Remove the “Continue Shopping” link
 * Optionally disable the cart page
@@ -117,7 +117,7 @@ You can do that using our option "Enable single page checkout" after enabling th
 
 = I want to redirect to category page after add to cart =
 You can do that in the FREE version you can have one category page as default redirect,
-But in PRO version you can set product lever redirect, so if someone buys a Pen you can redirect them to Books category or even a single Book (product)
+But in PRO version you can set product level redirect, so if someone buys a Pen you can redirect them to Books category or even a single Book (product)
 This way you can create a complete funnel of redirects
 
 = Increase sell-by redirecting the customer to the different product then they buy one =
@@ -142,10 +142,10 @@ At present, it is not working in the variable product but it will start supporti
 Using the Quick view button customer can see the product detail from the archive page without leaving the archive page
 
 = Quick view will work for the variable product =
-Ues Quick view will work for the variable product, infect it is most useful for the variable product, as a customer can see the variable product directly form the archive page and even add them to cart from the archive page, as the Quick view module allow them to select the product variation
+ Yes Quick view will work for the variable product, in fact it is most useful for the variable product, as a customer can see the variable product directly from the archive page and even add them to cart from the archive page, as the Quick view module allow them to select the product variation
 
 = Remove Order comment and coupon field from checkout page =
-You can remove order comment and coupon filed from the checkout page 
+You can remove order comment and coupon field from the checkout page 
 
 = Remove "Ship to a different address?" =
 In the Pro version, you can remove "Ship to a different address?" option 
