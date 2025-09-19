@@ -2,6 +2,8 @@
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/pisol.class.form.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/pisol.class.promotion.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/review.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Pro_Warning.php';
+
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pi-dcw-menu.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pi-dcw-option.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pi-dcw-checkout.php';
