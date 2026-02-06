@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Class_Pi_Dcw_Checkout{
 
@@ -85,7 +86,7 @@ class Class_Pi_Dcw_Checkout{
 
             array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Force login before checkout','pi-dcw'), 'type'=>'setting_category'),
 
-            array('field'=>'pi_dcw_force_login','desc'=>'Once enabled customer will not be able to checkout without login', 'label'=>__('Customer cant checkout without login','pi-dcw'),'type'=>'switch','default'=>0),
+            array('field'=>'pi_dcw_force_login','desc'=>'Once enabled customer will not be able to checkout without login', 'label'=>__('Customer can\'t checkout without login','pi-dcw'),'type'=>'switch','default'=>0),
 
             array('field'=>'pi_dcw_force_login_msg','desc'=>'This message will be shown on the login page when user tries to checkout without login', 'label'=>__('Message shown on login page','pi-dcw'),'type'=>'text', 'default'=>'Please log in or register to complete your purchase.'),
 
@@ -121,8 +122,8 @@ class Class_Pi_Dcw_Checkout{
             array('field'=>'pi_dcw_captcha_length','desc'=>'', 'label'=>__('Captcha string length','pi-dcw'),'type'=>'select', 'default'=>'6', 'value'=>array(1 => 1, 2 => 2, 3 => 3, 4 => 4, 5 => 5, 6 => 6)),
 
             array('field'=>'pi_dcw_captcha_placeholder','desc'=>'', 'label'=>__('Captcha field placeholder','pi-dcw'),'type'=>'text', 'default'=>'Enter the CAPTCHA'),
-            array('field'=>'pi_dcw_captcha_blank_error','desc'=>'', 'label'=>__('Captcha cant be left empty','pi-dcw'),'type'=>'text', 'default'=>'Captcha cant be left empty'),
-            array('field'=>'pi_dcw_captcha_mismatch_error','desc'=>'', 'label'=>__('Captcha cant be left empty','pi-dcw'),'type'=>'text', 'default'=>'Captcha does not match, please try again.'),
+            array('field'=>'pi_dcw_captcha_blank_error','desc'=>'', 'label'=>__('Captcha can\'t be left empty','pi-dcw'),'type'=>'text', 'default'=>'Captcha cant be left empty'),
+            array('field'=>'pi_dcw_captcha_mismatch_error','desc'=>'', 'label'=>__('Captcha can\'t be left empty','pi-dcw'),'type'=>'text', 'default'=>'Captcha does not match, please try again.'),
 
            
         );

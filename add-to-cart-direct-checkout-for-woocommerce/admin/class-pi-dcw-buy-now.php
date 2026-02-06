@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Class_Pi_Dcw_Buy_Now{
 
@@ -35,9 +36,9 @@ class Class_Pi_Dcw_Buy_Now{
 
         $this->settings = array(
 
-            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Buy now Button behavior'), 'type'=>'setting_category'),
+            array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('Buy now Button behavior', 'pi-dcw'), 'type'=>'setting_category'),
 
-            array('field'=>'pi_dcw_buy_now_behavior','desc'=>'Simple => user will be redirected to the checkout page,<br> Advance => user can have many product in his cart but he can checkout with this single product leaving other product in his cart (this make the buy now behave like <b>amazon.com</b> buy now button)', 'label'=>__('Buy not behavior'),'type'=>'select', 'default'=>'simple', 'value'=>array('simple'=>'Simple', 'advance'=>'Advance (Like Amazon.com buy now button)'), 'pro'=>true),
+            array('field'=>'pi_dcw_buy_now_behavior','desc'=>'Simple => user will be redirected to the checkout page,<br> Advance => user can have many product in his cart but he can checkout with this single product leaving other product in his cart (this make the buy now behave like <b>amazon.com</b> buy now button)', 'label'=>__('Buy now behavior','pi-dcw'),'type'=>'select', 'default'=>'simple', 'value'=>array('simple'=>'Simple', 'advance'=>'Advance (Like Amazon.com buy now button)'), 'pro'=>true),
 
             array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('On product page','pi-dcw'), 'type'=>'setting_category'),
 
@@ -49,7 +50,7 @@ class Class_Pi_Dcw_Buy_Now{
 
             array('field'=>'pi_dcw_buy_now_button_redirect','desc'=>__('Redirect to cart or checkout page','pi-dcw'), 'label'=>__('Redirect to cart/checkout page','pi-dcw'),'type'=>'select', 'default'=>'checkout', 'value'=>array('checkout'=>__('Checkout','pi-dcw'), 'cart'=>__('Cart','pi-dcw')), 'pro'=>true),
 
-            array('field'=>'pisol_dcw_button_size','desc'=>'Buy now button size on product page (PX)', 'label'=>__('Buy now button size on product page'),'type'=>'number', 'default'=>'', 'min'=>100, 'placeholder'=>'px'),
+            array('field'=>'pisol_dcw_button_size','desc'=>'Buy now button size on product page (PX)', 'label'=>__('Buy now button size on product page','pi-dcw'),'type'=>'number', 'default'=>'', 'min'=>100, 'placeholder'=>'px'),
 
 
             array('field'=>'sunday', 'class'=> 'bg-dark opacity-75 text-light', 'class_title'=>'text-light font-weight-light h4', 'label'=>__('On product archive page','pi-dcw'), 'type'=>'setting_category'),

@@ -1,4 +1,5 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Checkout_Captcha {
 
@@ -58,8 +59,10 @@ class Checkout_Captcha {
 
         add_action('woocommerce_checkout_order_processed', [$this, 'clear_captcha_session_after_checkout']);
 
-        add_action('wc_ajax_pi_dcw_generate_captcha', [$this, 'send_generated_captcha_image']);
-        add_action('wc_ajax_pi_dcw_refresh_captcha', [$this, 'refreshCaptcha']);
+        add_action('wp_ajax_pi_dcw_generate_captcha', [$this, 'send_generated_captcha_image']);
+        add_action('wp_ajax_nopriv_pi_dcw_generate_captcha', [$this, 'send_generated_captcha_image']);
+        add_action('wp_ajax_pi_dcw_refresh_captcha', [$this, 'refreshCaptcha']);
+        add_action('wp_ajax_nopriv_pi_dcw_refresh_captcha', [$this, 'refreshCaptcha']);
 
         add_action('wp_enqueue_scripts', [$this, 'enqueueScripts']);
         
@@ -80,7 +83,7 @@ class Checkout_Captcha {
         echo '<div id="pi_dcw_captcha">';
         echo '<input type="text" name="captcha_field" id="captcha_field" class="input-text" required placeholder="'.esc_attr($placeholder).'">';
         echo '<div class="captcha_image_container">';
-        echo '<img src="' . esc_url( site_url('?wc-ajax=pi_dcw_generate_captcha') ) . '" alt="CAPTCHA" id="captcha_image">';
+        echo '<img src="' . esc_url( admin_url('admin-ajax.php?action=pi_dcw_generate_captcha') ) . '" alt="CAPTCHA" id="captcha_image">';
         echo '</div>';
         echo '<a href="#" id="refresh_captcha" title="'.esc_attr($refresh_title).'"><img src="'.esc_url(plugin_dir_url( __FILE__ ).'img/refresh.svg').'" id="captcha_refresh_icon">.</a>';
         echo '</div>';
@@ -112,6 +115,10 @@ class Checkout_Captcha {
     }
 
     public function send_generated_captcha_image() {
+        nocache_headers();
+        if (ob_get_length()) {
+            ob_end_clean();
+        }
         $this->generate_captcha_image();
         wp_die();
     }
@@ -123,6 +130,7 @@ class Checkout_Captcha {
         $this->generate_captcha_image();
         $imageData = ob_get_contents();
         ob_end_clean();
+        //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo 'data:image/png;base64,' . base64_encode($imageData);
         wp_die(); // Prevent further execution
     }
@@ -133,14 +141,14 @@ class Checkout_Captcha {
         $characters = $this->get_characters();
         $captchaCode = '';
         for ($i = 0; $i < $this->captchaLength; $i++) {
-            $captchaCode .= $characters[rand(0, strlen($characters) - 1)];
+            $captchaCode .= $characters[wp_rand(0, strlen($characters) - 1)];
         }
 
         return $captchaCode;
     }
 
     private function generate_captcha_image() {
-        header('Content-type: image/png');
+        header('Content-Type: image/png');
         
         $captcha_string = $this->generateCaptchaCode();
         
@@ -162,8 +170,8 @@ class Checkout_Captcha {
 
         // Add noise (random lines)
         for ($i = 0; $i < 10; $i++) {
-            $lineColor = imagecolorallocate($image, rand(100, 200), rand(100, 200), rand(100, 200));
-            imageline($image, rand(0, $this->width), rand(0, $this->height), rand(0, $this->width), rand(0, $this->height), $lineColor);
+            $lineColor = imagecolorallocate($image, wp_rand(100, 200), wp_rand(100, 200), wp_rand(100, 200));
+            imageline($image, wp_rand(0, $this->width), wp_rand(0, $this->height), wp_rand(0, $this->width), wp_rand(0, $this->height), $lineColor);
         }
 
         // Add the CAPTCHA text
@@ -172,14 +180,13 @@ class Checkout_Captcha {
         $x = 10; // Starting x position
         $character_spacing = 30;
         for ($i = 0; $i < strlen($captchaCode); $i++) {
-            $angle = rand(-10, 10); // Random angle
-            $y = rand(30, 40); // Random y position
+            $angle = wp_rand(-10, 10); // Random angle
+            $y = wp_rand(30, 40); // Random y position
             imagettftext($image, $fontSize, $angle, $x, $y, $textColor, $this->fontPath, $captchaCode[$i]);
             $x += $character_spacing; // Increment x position
         }
 
         // Output image
-        header('Content-Type: image/png');
         imagepng($image);
         imagedestroy($image);
     }
@@ -194,8 +201,8 @@ class Checkout_Captcha {
         $this->addCaptchaText($image, $captchaCode);
         $image->swirlImage(20);
 
-        header('Content-Type: image/png');
         $image->setImageFormat('png');
+        //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $image;
 
         $image->clear();
@@ -206,9 +213,9 @@ class Checkout_Captcha {
     {
         $draw = new ImagickDraw();
         for ($i = 0; $i < 10; $i++) {
-            $draw->setStrokeColor(new ImagickPixel(sprintf('rgb(%d,%d,%d)', rand(100, 200), rand(100, 200), rand(100, 200))));
+            $draw->setStrokeColor(new ImagickPixel(sprintf('rgb(%d,%d,%d)', wp_rand(100, 200), wp_rand(100, 200), wp_rand(100, 200))));
             $draw->setStrokeWidth(1);
-            $draw->line(rand(0, $this->width), rand(0, $this->height), rand(0, $this->width), rand(0, $this->height));
+            $draw->line(wp_rand(0, $this->width), wp_rand(0, $this->height), wp_rand(0, $this->width), wp_rand(0, $this->height));
         }
         $image->drawImage($draw);
     }
@@ -223,8 +230,8 @@ class Checkout_Captcha {
         $x = 10;
         $characterSpacing = 30;
         for ($i = 0; $i < strlen($captchaCode); $i++) {
-            $angle = rand(-10, 10);
-            $y = rand(30, 40);
+            $angle = wp_rand(-10, 10);
+            $y = wp_rand(30, 40);
             $draw->annotation($x, $y, $captchaCode[$i]);
             $x += $characterSpacing;
         }
@@ -241,7 +248,7 @@ class Checkout_Captcha {
             $('body').on('click','#refresh_captcha', function (e) {
                 e.preventDefault();
                 jQuery('#pi_dcw_captcha').addClass('loading');
-                $.get('" .home_url('?wc-ajax=pi_dcw_refresh_captcha'). "', function (data) {
+                $.get('" .admin_url('admin-ajax.php?action=pi_dcw_refresh_captcha'). "', function (data) {
                     $('#captcha_image').attr('src', data); // Update image src with new data URL
                     jQuery('#pi_dcw_captcha').removeClass('loading');
                     jQuery('#captcha_field').val(''); // Clear the input field

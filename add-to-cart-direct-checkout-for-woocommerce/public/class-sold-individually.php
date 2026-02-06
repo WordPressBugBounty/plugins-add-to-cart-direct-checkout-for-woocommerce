@@ -2,6 +2,8 @@
 
 namespace PISOL\DCW\FRONT;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class SoldIndividuallyFront{
 
     static $instance = null;
@@ -51,6 +53,7 @@ class SoldIndividuallyFront{
     public function cannot_add_another_message( $message, $product_data ) {
 		if ( $product_data->get_type() == 'variation' ) {
 			if ( $parent_product = wc_get_product( $product_data->get_parent_id() ) ) {
+                // translators: %s: product name.
 				$message = sprintf( __( 'You cannot add another "%s" to your cart.', 'woocommerce' ), $parent_product->get_name() );
 			}
 		}

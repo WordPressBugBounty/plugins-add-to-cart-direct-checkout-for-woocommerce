@@ -73,7 +73,7 @@ class Pisol_Dcw_checkout_Authentication {
 	}
 
 	public function getMessage() {
-		return  strip_tags(get_option( 'pi_dcw_force_login_msg', 'Please log in or register to complete your purchase.'));
+		return  wp_strip_all_tags(get_option( 'pi_dcw_force_login_msg', 'Please log in or register to complete your purchase.'));
 	}
 
 	public function notice () {

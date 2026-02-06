@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
  * The admin-specific functionality of the plugin.
@@ -60,7 +61,7 @@ class Pi_Dcw_Admin {
 			delete_option('pi_dcw_do_activation_redirect');
 			if(!isset($_GET['activate-multi']))
 			{
-				wp_redirect("admin.php?page=pi-dcw");
+				wp_safe_redirect("admin.php?page=pi-dcw");
 			}
 		}
 	}

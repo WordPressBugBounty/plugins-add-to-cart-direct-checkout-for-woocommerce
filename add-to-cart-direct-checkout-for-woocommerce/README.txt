@@ -1,10 +1,9 @@
 === Add to Cart Redirect for WooCommerce ===
 Contributors: rajeshsingh520
-Donate link: piwebsolution.com
 Tags: WooCommerce direct checkout, direct checkout, WooCommerce Single Page Checkout, one page checkout, redirect to checkout
 Requires at least: 3.0.1
-Tested up to: 6.8
-Stable tag: 2.1.73.73
+Tested up to: 6.9
+Stable tag: 2.1.90
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,13 +41,13 @@ WooCommerce Direct Checkout aims to simplify the checkout process, leading to an
 
 Direct Checkout allows you to remove other unnecessary things in the checkout process like the order comments, shipping address (pro), coupon form.
 
-One Page Checkout – Reduce cart abandonment with our One Page Checkout option. One Page Checkout make easier for customers to buy from custom checkout pages by displaying both product selection and checkout forms on a single page. 
+One Page Checkout – Reduce cart abandonment with our One Page Checkout option. One Page Checkout makes it easier for customers to buy from custom checkout pages by displaying both the product selection and checkout forms on a single page. 
 
-The whole idea working behind WooCommerce single page checkout is to reduce the lengthy checkout process.
+The whole idea behind WooCommerce single page checkout is to reduce the lengthy checkout process.
 
 
 <blockquote>
-Buy Now button for Variable product on Category / Shop / Archive page, so the buyer can directly add the variable product to cart even without seeing its variation. **What it does is it adds the First variation of the variable product in the cart.**
+Buy Now button for variable products on Category / Shop / Archive pages, so the buyer can directly add the product to the cart even without viewing its variations. **What it does is, it adds the first variation of the variable product to the cart.**
 </blockquote>
 
 = PRO Features =
@@ -78,141 +77,147 @@ Let users quickly purchase a single product without affecting the rest of their 
 
 == Frequently Asked Questions ==
 
-= Where is the setting of the plugin? =
+= Where are the plugin settings? =
 On the left side of the dashboard
 WooCommerce > Direct checkout
 
-= How to activate redirect =
-Just install the plugin and activate it, and it will start redirecting to the checkout page
+= How to activate the redirect =
+Just install the plugin and activate it, and it will start redirecting to the checkout page.
 
 = I want to change the redirect page =
-Go to plugin Basic setting see the option **Redirect to page** there you can select from pages
+Go to the plugin Basic settings. See the option **Redirect to page**; there you can select from pages.
 
 = I want to disable redirect =
-Go to Basic Setting click on **Enable redirect on add to cart** This is used to enable and disable the redirect
+Go to Basic Settings and click on **Enable redirect on add to cart**. This option is used to enable or disable the redirect.
 
-= I want to set redirect on on product only =
-PRO version has this Features
-In the pro version, you can disable global redirect and set a redirect for you one product.
-This way user will be redirected only when they Add to cart that specific product, and they won't be redirected when they add to cart other products
+= I want to set redirect on a product only =
+PRO version has this feature.
+In the PRO version, you can disable the global redirect and set a redirect for one product.
+This way, the user will be redirected only when they add that specific product to the cart, and they won't be redirected when they add other products.
 
-= I want to disable redirect on few specific products =
-PRO version allows you to do this
+= I want to disable redirect on a few specific products =
+PRO version allows you to do this.
 
-= I want to change the redirect page for specific product =
-Pro Version allows you to change the redirect page for a specific product
+= I want to change the redirect page for a specific product =
+Pro Version allows you to change the redirect page for a specific product.
 
-= Will it works on Archive page =
-Yes our plugin works on all the add to cart button
+= Will it work on the archive page =
+Yes, our plugin works on all the add to cart buttons.
 
-= Will it works on Ajax add to cart button =
-Yes our plugin works on ajax add to cart button as well
+= Will it work on the Ajax add to cart button =
+Yes, our plugin works on Ajax add to cart buttons as well.
 
-= I want to bypass cart page in WooCommerce =
-You can do so now with our option "Disable cart page" this will redirect all the cart page traffic to the checkout page
+= I want to bypass the cart page in WooCommerce =
+You can do so now with our option "Disable cart page"; this will redirect all cart page traffic to the checkout page.
 
-= I want to show cart page and checkout page as one-page checkout instead of 2 different pages in WooCommerce
-You can do that using our option "Enable single page checkout" after enabling this cart and checkout will be shown on the same page
-(Single page checkout will now work, if you implement your checkout page using WooCommerce content block, you should implement your checkout page using [woocommerce_checkout] short code)
+= I want to show the cart page and checkout page as one-page checkout instead of 2 different pages in WooCommerce
+You can do that using our option "Enable single page checkout"; after enabling this, the cart and checkout will be shown on the same page.
+(Single page checkout will now work if you implement your checkout page using the WooCommerce content block; you should implement your checkout page using the [woocommerce_checkout] shortcode)
 
-= I want to redirect to category page after add to cart =
-You can do that in the FREE version you can have one category page as default redirect,
-But in PRO version you can set product level redirect, so if someone buys a Pen you can redirect them to Books category or even a single Book (product)
-This way you can create a complete funnel of redirects
+= I want to redirect to a category page after adding to cart =
+You can do that in the FREE version; you can set one category page as the default redirect,
+But in the PRO version you can set a product-level redirect, so if someone buys a pen you can redirect them to the Books category or even a single book (product).
+This way you can create a complete funnel of redirects.
 
-= Increase sell-by redirecting the customer to the different product then they buy one =
-Say someone buys T-shirt then as soon as they add to cart this t-shirt, they get redirected to Paints product page, say if they even add some pain in the cart they will be redirected to some other product, this way they will go on buying 
+= Increase sales by redirecting the customer to a different product when they buy one =
+Say someone buys a T-shirt; as soon as they add this T-shirt to the cart, they get redirected to the Paints product page. If they then add some paint to the cart, they will be redirected to another product. This way, they will go on buying.
 
-= I want to change add to cart button text =
-Yes you can change it from the plugin setting
+= I want to change the Add to Cart button text =
+Yes, you can change it from the plugin settings.
 
 = Can I enable and customize the quick purchase button? =
 Yes, the plugin lets you add a quick purchase button to product and archive pages, and in the PRO version, you can also change its label.
 
-= You can disable Quick purchase button for the product archive page =
-Yes you can disable it for product archive page and keep it running for the product page or vice versa
+= You can disable the Quick Purchase button for the product archive page =
+Yes, you can disable it for the product archive page and keep it running for the product page or vice versa.
 
-= I want to disable Quick purchase button for specific product =
-Yes you can do that in the pro version, it allows you to disable Quick purchase button on a particular product
+= I want to disable the Quick Purchase button for a specific product =
+Yes, you can do that in the Pro version; it allows you to disable the Quick Purchase button on a particular product.
 
-= Buy now button is not working on variable product =
-At present, it is not working in the variable product but it will start supporting variable product shortly
+= The Buy Now button is not working on a variable product =
+At present, it does not work with variable products, but it will start supporting variable products shortly.
 
-= You can have a Quick view option for the product in archive page =
-Using the Quick view button customer can see the product detail from the archive page without leaving the archive page
+= You can have a Quick View option for the product on the archive page =
+Using the Quick View button, customers can see the product details from the archive page without leaving the page.
 
-= Quick view will work for the variable product =
- Yes Quick view will work for the variable product, in fact it is most useful for the variable product, as a customer can see the variable product directly from the archive page and even add them to cart from the archive page, as the Quick view module allow them to select the product variation
+= Quick View will work for the variable product =
+ Yes, Quick View will work for variable products; in fact, it is most useful for variable products, as a customer can view the product directly from the archive page and even add it to the cart from the archive page, as the Quick View module allows them to select the product variation.
 
-= Remove Order comment and coupon field from checkout page =
-You can remove order comment and coupon field from the checkout page 
+= Remove Order comments and coupon fields from the checkout page =
+You can remove order comments and coupon fields from the checkout page. 
 
 = Remove "Ship to a different address?" =
-In the Pro version, you can remove "Ship to a different address?" option 
+In the Pro version, you can remove the "Ship to a different address?" option. 
 
-= Remove billing field from the checkout form =
-In Pro version, You can remove, Billing the first name, Billing last name, Billing City, Billing country, Billing state, Billing address line 1, Billing address line 2, Billing postal code from the checkout form
-This feature will only work if your checkout page is made using WooCommerce short code [woocommerce_checkout], It will not work if your checkout page is made of WooCommerce checkout Block.
+= Remove billing fields from the checkout form =
+In the Pro version, you can remove the following billing fields from the checkout form: First name, Last name, City, Country, State, Address line 1, Address line 2, and Postal code.
+This feature will only work if your checkout page is made using the WooCommerce shortcode [woocommerce_checkout]. It will not work if your checkout page is made with the WooCommerce Checkout Block.
 
-= Remove shipping field from the checkout form =
-In Pro version You can remove, Shipping First name, Shipping last name, Shipping city, Shipping country, Shipping state, Shipping address line 1, Shipping address line 2, Shipping postal code from the checkout form
-This feature will only work if your checkout page is made using WooCommerce short code [woocommerce_checkout], It will not work if your checkout page is made of WooCommerce checkout Block.
+= Remove shipping fields from the checkout form =
+In the Pro version, you can remove the following shipping fields from the checkout form: First name, Last name, City, Country, State, Address line 1, Address line 2, and Postal code.
+This feature will only work if your checkout page is made using the WooCommerce shortcode [woocommerce_checkout]. It will not work if your checkout page is made with the WooCommerce Checkout Block.
 
-= I want to redirect to external URL after add to cart =
-Yes you can do that in the pro version
+= I want to redirect to an external URL after adding to cart =
+Yes, you can do that in the Pro version.
 
 = Can I enable one-click checkout for variable products on archive pages? =
 Yes, in the PRO version, a default variation can be added directly to the cart from archive views.
 
-= The buy now button on the archive page is not working for a particular product =
-You have to make sure that you have set the default values of all the required variables for that product. If some required variable is not set for the first variation and you have not set a default for that variable then, in that case, buy now for that product will fail with a warning that "required field can be blank"
+= The Buy Now button on the archive page is not working for a particular product =
+You have to make sure that you have set the default values of all the required variables for that product. If some required variable is not set for the first variation and you have not set a default for that variable, then, in that case, Buy Now for that product will fail with a warning that "required fields cannot be blank".
 
-= I want the product name given on the Checkout page to be linked to product pages of the respective products =
-Yes you can do that using the Pro version it gives you the option to link product name on the checkout page to their respective product pages
+= I want the product name given on the Checkout page to be linked to the product pages of the respective products =
+Yes, you can do that using the Pro version; it gives you the option to link product names on the checkout page to their respective product pages.
 
 = Customize the size of the Quick View box =
-You can customize the width of the Quick view box in the pro version
+You can customize the width of the Quick View box in the Pro version.
 
-= Redirect customer to custom thankyou page on order success =
-Pro version gives you option to redirect customer to custom page on successful order placement 
+= Redirect customers to a custom thank you page on order success =
+The Pro version gives you the option to redirect customers to a custom page on successful order placement. 
 
-= Set different thank you page url for different product =
-Pro version allow you to set different thank you page url for different products,
+= Set different thank you page URL for different products =
+Pro version allows you to set different thank you page URLs for different products.
 
-= How the custom thankyou page redirect will work if there are 2 product in the order with different thank you page url =
-you have the option to specify the Weight of the link in the product page, so when there are 2 product with different thank you page then their weight is considered and the product with highest weight is used for the redirect
+= How will the custom thank you page redirect work if there are 2 products in the order with different thank you page URLs =
+You have the option to specify the weight of the link on the product page, so when there are 2 products with different thank you pages, their weight is considered, and the product with the highest weight is used for the redirect.
 
-= How to modify the cart details on WooCommerce checkout page =
-Yes you can do that, plugin gives you the option to show the quantity field next to each product on the checkout page, and option to remove product from the checkout page itself
+= How to modify the cart details on the WooCommerce checkout page =
+Yes, you can do that. The plugin gives you the option to show the quantity field next to each product on the checkout page, and the option to remove products from the checkout page itself.
 
-= How to Change Quantity In Checkout WooCommerce? / I want to give option to modify product quantity on the checkout page of WooCommerce =
-Yes you can do that, plugin gives you the option to show the quantity field next to each product on the checkout page, from there customer can modify the quantity on the checkout page itself
+= How to change quantity in WooCommerce checkout? / I want to give the option to modify product quantity on the WooCommerce checkout page =
+Yes, you can do that. The plugin gives you the option to show the quantity field next to each product on the checkout page; from there, customers can modify the quantity on the checkout page itself.
 
-= I want to give option to remove product from the checkout page =
-Yes product gives you the option to remove product directly from the checkout page without going to cart page
+= I want to give the option to remove products from the checkout page =
+Yes, the plugin gives you the option to remove products directly from the checkout page without going to the cart page.
 
-= Option to change quantity in checkout page and remove product is disabled =
-This option will not enable if you have enabled the single page checkout option "Enable single page checkout" in Basic setting tab
+= Option to change quantity on the checkout page and remove product is disabled =
+This option will not be enabled if you have enabled the single page checkout option "Enable single page checkout" in the Basic settings tab.
 
-= How to force WooCommerce customers to login or register before they buy =
-For this Go to Checkout settings tab there you can enable the option of "Force login before checkout"
+= How to force WooCommerce customers to log in or register before they buy =
+For this, go to the Checkout settings tab; there you can enable the option "Force login before checkout".
 
-= Registration option is missing on the Login page =
-To enable registration option Go to **WooCommerce > Settings > Accounts & Privacy** and enable the option of **Allow customers to create an account on the "My account" page**
+= The registration option is missing on the login page =
+To enable the registration option, go to **WooCommerce > Settings > Accounts & Privacy** and enable the option **Allow customers to create an account on the "My account" page**.
 
-= Is it HPOS compatible =
-Yes the Free version and PRO version both are HPOS compatible
+= Is it HPOS compatible? =
+Yes, the free version and PRO version are both HPOS compatible.
 
 = Can the Buy Now button behave like Amazon’s one-click checkout? =
 Yes, in the PRO version, the Buy Now button can mimic Amazon-style behavior. When clicked, the customer is redirected to the checkout with only the selected product, while any other items in the cart are saved for later.
 
 = How to stop spam in WooCommerce orders? / How to prevent spam orders? =
-You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCHA on checkout page" in the Checkout settings tab, this will show a simple captcha on the checkout page, so that only human can place the order
+You can stop spam in WooCommerce orders by enabling the option "Enable CAPTCHA on checkout page" in the Checkout settings tab. This will show a simple CAPTCHA on the checkout page so that only humans can place orders.
 
 == Changelog ==
 
+= 2.1.90 =
+* capcha to use admin-ajax.php
+
+= 2.1.77 =
+* code improvement
+
 = 2.1.73.69 =
-* documentation added
+* Documentation added
 
 = 2.1.73.67 =
 * Tested for WC 10.0.2
@@ -240,7 +245,7 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 * Tested for WC 9.7.1
 
 = 2.1.73.47 =
-* Tested for  WC 9.7.0
+* Tested for WC 9.7.0
 
 = 2.1.73.46 =
 * Tested for WC 9.6.2
@@ -258,13 +263,13 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 * Checkout spam protection with captcha added
 
 = 2.1.73.37 =
-* PHP 8.2 deprecation warning fix 
+* PHP 8.2 deprecation warning fixed 
 
 = 2.1.73.36 =
 * Tested for WP 6.7.0
 
 = 2.1.73.34 =
-* content change
+* Content change
 
 = 2.1.73.32 =
 * Tested for WC 9.3.0
@@ -280,7 +285,7 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 
 = 2.1.73.27 =
 * Tested for WP 6.6.0
-* code improvement
+* Code improvement
 
 = 2.1.73.26 =
 * Tested for WC 9.0.3
@@ -289,7 +294,7 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 * Tested for WC 9.0.0
 
 = 2.1.73.11 =
-* New implementation for the single page checkout, with option to fall back to old way of implementation
+* New implementation for the single page checkout, with an option to fall back to the old way of implementation
 
 = 2.1.73.6 =
 * Tested for WP 6.4.2
@@ -302,7 +307,7 @@ You can stop spam in WooCommerce orders by enabling the option of "Enable CAPTCH
 * Tested for WP 6.4.0
 
 = 2.1.73.1 =
-* Small change in checkout quantity changer, now it will have cart item as id rather then random id 
+* Small change in checkout quantity changer; now it will have the cart item as ID rather than a random ID 
 
 == Privacy ==
 
@@ -311,7 +316,7 @@ If you choose to opt in from the plugin settings, or submit optional feedback du
 - Plugin version  
 - WordPress version  
 - WooCommerce version  
-- Site url
+- Site URL
 - Deactivation reason (if submitted)
 
 This data is used solely to improve plugin quality, compatibility, and features. No personal or user-specific data is collected without consent.

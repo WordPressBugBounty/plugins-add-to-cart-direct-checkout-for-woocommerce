@@ -31,8 +31,6 @@ class Pi_WooCommerce_Quick_Buy_Auto_Add {
 	public function __construct() {
 		$this->show_on_product = $this->showOnProduct();
 		$this->show_on_archive = $this->showOnArchive();
-		$this->label_product = __('Buy Now');
-		$this->label_loop = __('Buy Now');
 
 		$this->product_position = 'after_button';
 		$this->loop_position = 'after_button';

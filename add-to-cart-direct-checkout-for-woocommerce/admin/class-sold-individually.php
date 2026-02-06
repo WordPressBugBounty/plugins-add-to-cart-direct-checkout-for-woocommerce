@@ -2,6 +2,8 @@
 
 namespace PISOL\DCW\BACK;
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class SoldIndividuallyBackend{
 
     static $instance = null;

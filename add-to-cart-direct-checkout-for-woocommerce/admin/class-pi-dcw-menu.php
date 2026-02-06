@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Pi_Dcw_Menu{
 
@@ -110,8 +111,7 @@ class Pi_Dcw_Menu{
                     <li>✓ Set unique success page per product</li>
                     </ul>
 
-                    <h4 class="pi-bottom-banner">💰 Just <?php echo esc_html(PI_DCW_PRICE); ?></h4>
-                    <h4 class="pi-bottom-banner">🔥 Unlock all features and grow your sales!</h4>
+                    <h4 class="pi-bottom-banner">💰 Only <?php echo esc_html(PI_DCW_PRICE); ?> <small>Billed yearly</small></h4>
 
                     <div class="text-center pb-3">
                     <a class="btn btn-primary btn-md mt-2 mb-2" href="<?php echo esc_url( PI_DCW_BUY_URL ); ?>" target="_blank">🔓 Unlock Pro Now – Limited Time Price!</a>
@@ -131,7 +131,7 @@ class Pi_Dcw_Menu{
     }
 
     function isWeekend() {
-        return (date('N', strtotime(date('Y/m/d'))) >= 6);
+        return (wp_date('N', strtotime(wp_date('Y/m/d'))) >= 6);
     }
 
     function support(){

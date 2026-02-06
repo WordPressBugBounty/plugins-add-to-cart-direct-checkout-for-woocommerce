@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if (!class_exists('pisol_dcw_change_remove_quantity_checkout')) {
 
 class pisol_dcw_change_remove_quantity_checkout {
