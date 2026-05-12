@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              piwebsolution.com
- * @since             2.1.96
+ * @since             2.1.97
  * @package           Pi_Dcw
  *
  * @wordpress-plugin
@@ -17,7 +17,7 @@
  * Requires Plugins:  woocommerce
  * Plugin URI:        https://www.piwebsolution.com/product/add-to-cart-direct-checkout-for-woocommerce-pro/
  * Description:       WooCommerce single page checkout, lets you show cart and checkout option on single page, that is one page checkout for WooCommerce, along with it you can redirect user directly to checkout as they click add to cart
- * Version:           2.1.96
+ * Version:           2.1.97
  * Author:            PI Websolution
  * Author URI:        https://www.piwebsolution.com/
  * License:           GPL-2.0+
@@ -69,7 +69,7 @@ if(!is_plugin_active( 'woocommerce/woocommerce.php')){
 }
 
 /* buy link and buy price */
-define('PI_DCW_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=1015&variation_id=1824&utm_campaign=direct-checkout&utm_source=website&utm_medium=direct-buy#order_review_heading');
+define('PI_DCW_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=1015&variation_id=1824&utm_campaign=direct-checkout-free-plugin&utm_source=website&utm_medium=direct-buy#order_review_heading');
 define('PI_DCW_PRICE', '$1.33 / month');
 
 /**
@@ -77,7 +77,7 @@ define('PI_DCW_PRICE', '$1.33 / month');
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PI_DCW_VERSION', '2.1.96' );
+define( 'PI_DCW_VERSION', '2.1.97' );
 define( 'PISOL_DCW_DELETE_SETTING', false );
 
 /**
